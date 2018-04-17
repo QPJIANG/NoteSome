@@ -1,0 +1,9 @@
+RDP默认端口：3389
+
+修改端口步骤：
+             (启动注册表管理器：win+r    regeidt )
+    1. 修改注册表 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp  的 PortNumber （可用10进制修改）
+    2.  修改注册表 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp 的 PortNumber （可用10进制修改）
+    （1,2 步骤修改的端口号一致）
+            (任务管理器 进 服务管理)
+    3. 重启服务： Remote Desktop *

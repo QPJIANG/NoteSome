@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootstrap 实例 - 弹出框（Popover）插件</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" style="padding: 100px 50px 10px;" >
+  <button class="x btn btn-default">click</button>
+	  <span class="x btn btn-default">click</span>
+</div>
+<script>
+$(function () {
+
+  $(".x").popover({
+			trigger:"focus",
+  		title:"懒人建站-jquery插件",  //如果不需要标题就不要配置这个选项
+  		content:"内容：懒人建站<hr/>hello",
+  		html:true
+  	});
+
+	// $(".x").popover({
+	// 	trigger:"focus",    //如果设为focus 当按钮失去焦点提示层会消失，例如页面空白处单机提示层消失
+  //       html:true,
+  //       content:'<p style="width: 500px;">html:true会解析html标签哦，<a href="http://www.com/" target="_blank">懒人建站</a></p><p>你也试试吧！</p>'
+	// });
+
+// 	function content() {
+//    if (content._cache) return content._cache;
+//    var html=$.ajax("xxxx");
+//    return content._cache=html;
+// };
+//  el.popover({
+//        html: true,
+//        content: content,
+// });
+});
+</script>
+
+</body>
+</html>

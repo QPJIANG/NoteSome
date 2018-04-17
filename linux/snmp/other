@@ -1,0 +1,2 @@
+snmpnetstat -v 2c -c public  svnagent_ip_or_host
+snmpstatus -v 2c -c public  svnagent_ip_or_host

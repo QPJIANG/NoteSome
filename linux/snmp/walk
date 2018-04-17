@@ -1,0 +1,9 @@
+snmpwalk -Os
+snmpwalk -On
+         -OsQtu
+         -OsQtU
+
+
+atPhysAddress,ipNetToMediaPhysAddress
+
+

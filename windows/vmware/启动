@@ -1,0 +1,6 @@
+Starting a virtual machine with Workstation on a Windows host
+   vmrun -T ws start "c:\my VMs\myVM.vmx"
+
+
+
+vmrun --help ： 查看帮助

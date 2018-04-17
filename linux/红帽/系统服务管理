@@ -1,0 +1,15 @@
+有时候我们需要Linux系统在开机的时候自动加载某些脚本或系统服务
+
+主要用三种方式进行这一操作：
+
+ln -s                       在/etc/rc.d/rc*.d目录中建立/etc/init.d/服务的软链接(*代表0～6七个运行级别之一）
+
+chkonfig                命令行运行级别设置
+
+ntsysv                   伪图形运行级别设置
+
+
+chkconfig 服务名 on/off            设置服务开机自启动与否
+chkconfig --list 服务名            查看服务运行级别
+chkconfig  --level  2345  服务名 on/off    指定服务运行级别（2345 可以选其中几个数字）
+

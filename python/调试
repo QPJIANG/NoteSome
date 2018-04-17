@@ -1,0 +1,2 @@
+跟踪函数调用
+python -m trace --trace <your python entry> [args ...]

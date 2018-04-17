@@ -1,0 +1,18 @@
+Win+R
+
+    msinfo32          系统各项信息
+
+    msconfig          系统配置
+
+    slmgr.vbs -xpr    查看系统激活截至时间
+
+    slmgr.vbs -dlv    查看系统激活信息
+
+cmd:
+
+    powercofg -h on/off   虚拟内存开关（系统盘紧张时使用）
+
+    
+
+
+

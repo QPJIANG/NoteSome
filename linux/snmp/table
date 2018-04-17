@@ -1,0 +1,289 @@
+enterprises
+mgmt
+iso
+dskTable    #磁盘
+org
+private
+snmpV2
+
+laTable
+snmpTargetAddrTable
+snmpTargetParamsTable
+udpEndpointTable
+udpTable
+hrStorageTable
+hrDeviceTable
+hrProcessorTable
+hrNetworkTable
+hrSWRunTable   #进程
+hrSWRunPerfTable
+nsCacheTable
+nsLoggingTable
+nsModuleTable
+
+
+IF-MIB::ifXTable
+ifTable   # ports
+ipNetToMediaTable
+ipAddrTable
+ipNetToPhysicalTable
+at.atTable
+ snmptable -c public -v 2c agent_ip  RFC1213-MIB::atTable
+ snmptable -c public -v 2c agent_ip  RFC1213-MIB::ipRouteTable
+ipCidrRouteTable
+inetCidrRouteTable
+ipSystemStatsTable
+sysORTable
+mteObjectsTable
+mteEventTable
+mteEventNotificationTable
+snmpNotifyTable
+
+RFC1213-MIB::atTable
+IF-MIB::ifTable
+RFC1213-MIB::ipRouteTable  
+
+
+
+  ipRouteTable
+  ipNetToMediaTable
+  tcpConnTable
+  UDP-MIB::udpTable
+
+
+
+
+
+
+
+
+
+
+      ifTable         "C0 "               0
+               ipAddressTable         "C0 "               0
+          inetNetToMediaTable         "C0 "               0
+                     tcpTable         "80 "               0
+           tcpConnectionTable         "C0 "               0
+             tcpListenerTable         "80 "               0
+                     udpTable         "80 "               0
+             udpEndpointTable         "80 "               0
+            advanceipsecTable         "C0 "               0
+               multipsecTable         "C0 "               0
+             ipCidrRouteTable         "80 "               0
+           inetCidrRouteTable         "C0 "               0
+           ipSystemStatsTable         "80 "               0
+                     ifXTable         "C0 "               0
+           ifTableLastChanged         "80 "               0
+                   schedTable         "C0 "               0
+                     vpnTable         "80 "               0
+                extendipTable         "C0 "               0
+                     appTable         "80 "               0
+                    hostTable         "80 "               0
+        snmpNotifyFilterTable         "C0 "               0
+             mibII/sysORTable         "C0 "              -1
+             mibII/sysORTable         "C0 "              -1
+             mibII/sysORTable         "C0 "              -1
+              mteTriggerTable         "C0 "               0
+         mteTriggerDeltaTable         "C0 "               0
+     mteTriggerExistenceTable         "C0 "               0
+       mteTriggerBooleanTable         "C0 "               0
+     mteTriggerThresholdTable         "C0 "               0
+              mteObjectsTable         "C0 "               0
+                mteEventTable         "C0 "               0
+    mteEventNotificationTable         "C0 "               0
+             mteEventSetTable         "C0 "               0
+                nsModuleTable         "C0 "               0
+                 tzCacheTable         "C0 "               0
+           nsTransactionTable         "80 "               0
+            nsVacmAccessTable         "C0 "               0
+          nsExtendConfigTable         "C0 "               0
+            nsExtendOut1Table         "80 "               0
+            nsExtendOut2Table         "80 "               0
+                 tzDebugTable         "C0 "               0
+               tzLoggingTable         "C0 "               0
+              snmpNotifyTable         "C0 "              -1
+              snmpNotifyTable         "C0 "              -1
+              snmpNotifyTable         "C0 "              -1
+              snmpNotifyTable         "C0 "              -1
+ snmpNotifyFilterProfileTable         "C0 "              -1
+ snmpNotifyFilterProfileTable         "C0 "              -1
+ snmpNotifyFilterProfileTable         "C0 "              -1
+
+[root@cdserv1 mibs]# grep OBJECT-TYPE . -R | grep Table
+./DISMAN-SCRIPT-MIB.txt:smLangTable OBJECT-TYPE
+./DISMAN-SCRIPT-MIB.txt:smExtsnTable OBJECT-TYPE
+./DISMAN-SCRIPT-MIB.txt:smScriptTable OBJECT-TYPE
+./DISMAN-SCRIPT-MIB.txt:smCodeTable OBJECT-TYPE
+./DISMAN-SCRIPT-MIB.txt:smLaunchTable OBJECT-TYPE
+./DISMAN-SCRIPT-MIB.txt:smRunTable OBJECT-TYPE
+./SNMP-TARGET-MIB.txt:snmpTargetAddrTable OBJECT-TYPE
+./SNMP-TARGET-MIB.txt:snmpTargetParamsTable OBJECT-TYPE
+./EtherLike-MIB.txt:    dot3StatsTable OBJECT-TYPE
+./EtherLike-MIB.txt:    dot3CollTable OBJECT-TYPE
+./EtherLike-MIB.txt:    dot3ControlTable OBJECT-TYPE
+./EtherLike-MIB.txt:    dot3PauseTable OBJECT-TYPE
+./EtherLike-MIB.txt:    dot3HCStatsTable OBJECT-TYPE
+./UCD-DLMOD-MIB.txt:dlmodTable OBJECT-TYPE 
+./SNMP-PROXY-MIB.txt:snmpProxyTable OBJECT-TYPE
+./MTA-MIB.txt:mtaTable OBJECT-TYPE
+./MTA-MIB.txt:mtaGroupTable OBJECT-TYPE
+./MTA-MIB.txt:mtaGroupAssociationTable OBJECT-TYPE
+./MTA-MIB.txt:mtaGroupErrorTable OBJECT-TYPE
+./UDP-MIB.txt:udpEndpointTable OBJECT-TYPE
+./UDP-MIB.txt:udpTable OBJECT-TYPE
+./IPV6-UDP-MIB.txt:ipv6UdpTable OBJECT-TYPE
+./LM-SENSORS-MIB.txt:lmTempSensorsTable OBJECT-TYPE
+./LM-SENSORS-MIB.txt:lmFanSensorsTable OBJECT-TYPE
+./LM-SENSORS-MIB.txt:lmVoltSensorsTable OBJECT-TYPE
+./LM-SENSORS-MIB.txt:lmMiscSensorsTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrStorageTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrDeviceTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrProcessorTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrNetworkTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrPrinterTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrDiskStorageTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrPartitionTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrFSTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrSWRunTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrSWRunPerfTable OBJECT-TYPE
+./HOST-RESOURCES-MIB.txt:hrSWInstalledTable OBJECT-TYPE
+./UCD-DISKIO-MIB.txt:diskIOTable OBJECT-TYPE
+./NET-SNMP-AGENT-MIB.txt:nsCacheTable     OBJECT-TYPE
+./NET-SNMP-AGENT-MIB.txt:nsDebugTokenTable     OBJECT-TYPE
+./NET-SNMP-AGENT-MIB.txt:nsLoggingTable     OBJECT-TYPE
+./NET-SNMP-AGENT-MIB.txt:nsTransactionTable OBJECT-TYPE
+./NET-SNMP-AGENT-MIB.txt:nsModuleTable OBJECT-TYPE
+./SNMP-USER-BASED-SM-MIB.txt:usmUserTable     OBJECT-TYPE
+./UCD-IPFWACC-MIB.txt:ipFwAccTable OBJECT-TYPE
+./SCTP-MIB.txt:sctpAssocTable OBJECT-TYPE
+./SCTP-MIB.txt:sctpAssocLocalAddrTable OBJECT-TYPE
+./SCTP-MIB.txt:sctpAssocRemAddrTable OBJECT-TYPE
+./SCTP-MIB.txt:sctpLookupLocalPortTable OBJECT-TYPE
+./SCTP-MIB.txt:sctpLookupRemPortTable OBJECT-TYPE
+./SCTP-MIB.txt:sctpLookupRemHostNameTable OBJECT-TYPE
+./SCTP-MIB.txt:sctpLookupRemPrimIPAddrTable OBJECT-TYPE
+./SCTP-MIB.txt:sctpLookupRemIPAddrTable OBJECT-TYPE
+./BRIDGE-MIB.txt:dot1dBasePortTable OBJECT-TYPE
+./BRIDGE-MIB.txt:dot1dStpPortTable OBJECT-TYPE
+./BRIDGE-MIB.txt:dot1dTpFdbTable OBJECT-TYPE
+./BRIDGE-MIB.txt:dot1dTpPortTable OBJECT-TYPE
+./BRIDGE-MIB.txt:dot1dStaticTable OBJECT-TYPE
+./IPV6-TCP-MIB.txt:ipv6TcpConnTable OBJECT-TYPE
+./TCP-MIB.txt:tcpConnectionTable OBJECT-TYPE
+./TCP-MIB.txt:tcpListenerTable OBJECT-TYPE
+./TCP-MIB.txt:tcpConnTable OBJECT-TYPE
+./SNMP-VIEW-BASED-ACM-MIB.txt:vacmContextTable OBJECT-TYPE
+./SNMP-VIEW-BASED-ACM-MIB.txt:vacmSecurityToGroupTable OBJECT-TYPE
+./SNMP-VIEW-BASED-ACM-MIB.txt:vacmAccessTable  OBJECT-TYPE
+./SNMP-VIEW-BASED-ACM-MIB.txt:vacmViewTreeFamilyTable OBJECT-TYPE
+./IPV6-MIB.txt:ipv6IfTableLastChange OBJECT-TYPE
+./IPV6-MIB.txt:ipv6IfTable OBJECT-TYPE
+./IPV6-MIB.txt: ipv6IfStatsTable OBJECT-TYPE
+./IPV6-MIB.txt: ipv6AddrPrefixTable OBJECT-TYPE
+./IPV6-MIB.txt: ipv6AddrTable OBJECT-TYPE
+./IPV6-MIB.txt: ipv6RouteTable OBJECT-TYPE
+./IPV6-MIB.txt: ipv6NetToMediaTable OBJECT-TYPE
+./NET-SNMP-EXAMPLES-MIB.txt:netSnmpIETFWGTable OBJECT-TYPE
+./NET-SNMP-EXAMPLES-MIB.txt:netSnmpHostsTable OBJECT-TYPE
+./NET-SNMP-VACM-MIB.txt:nsVacmAccessTable  OBJECT-TYPE
+./SMUX-MIB.txt:smuxPeerTable   OBJECT-TYPE
+./SMUX-MIB.txt:smuxTreeTable   OBJECT-TYPE
+./IP-FORWARD-MIB.txt:inetCidrRouteTable OBJECT-TYPE
+./IP-FORWARD-MIB.txt:ipCidrRouteTable OBJECT-TYPE
+./IP-FORWARD-MIB.txt:ipForwardTable OBJECT-TYPE
+./UCD-SNMP-MIB.txt:prTable OBJECT-TYPE
+./UCD-SNMP-MIB.txt:extTable OBJECT-TYPE
+./UCD-SNMP-MIB.txt:dskTable OBJECT-TYPE
+./UCD-SNMP-MIB.txt:laTable OBJECT-TYPE
+./UCD-SNMP-MIB.txt:mrTable OBJECT-TYPE
+./UCD-SNMP-MIB.txt:fileTable OBJECT-TYPE
+./UCD-SNMP-MIB.txt:logMatchTable OBJECT-TYPE
+./RMON-MIB.txt:etherStatsTable OBJECT-TYPE
+./RMON-MIB.txt:historyControlTable OBJECT-TYPE
+./RMON-MIB.txt:etherHistoryTable OBJECT-TYPE
+./RMON-MIB.txt:alarmTable OBJECT-TYPE
+./RMON-MIB.txt:hostControlTable OBJECT-TYPE
+./RMON-MIB.txt:hostControlTableSize OBJECT-TYPE
+./RMON-MIB.txt:hostTable OBJECT-TYPE
+./RMON-MIB.txt:hostTimeTable OBJECT-TYPE
+./RMON-MIB.txt:hostTopNControlTable OBJECT-TYPE
+./RMON-MIB.txt:hostTopNTable OBJECT-TYPE
+./RMON-MIB.txt:matrixControlTable OBJECT-TYPE
+./RMON-MIB.txt:matrixControlTableSize OBJECT-TYPE
+./RMON-MIB.txt:matrixSDTable OBJECT-TYPE
+./RMON-MIB.txt:matrixDSTable OBJECT-TYPE
+./RMON-MIB.txt:filterTable OBJECT-TYPE
+./RMON-MIB.txt:channelTable OBJECT-TYPE
+./RMON-MIB.txt:bufferControlTable OBJECT-TYPE
+./RMON-MIB.txt:captureBufferTable OBJECT-TYPE
+./RMON-MIB.txt:eventTable OBJECT-TYPE
+./RMON-MIB.txt:logTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteTriggerTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteTriggerDeltaTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteTriggerExistenceTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteTriggerBooleanTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteTriggerThresholdTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteObjectsTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteEventTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteEventNotificationTable OBJECT-TYPE
+./DISMAN-EVENT-MIB.txt:mteEventSetTable OBJECT-TYPE
+./NET-SNMP-EXTEND-MIB.txt:nsExtendConfigTable     OBJECT-TYPE
+./NET-SNMP-EXTEND-MIB.txt:nsExtendOutput1Table     OBJECT-TYPE
+./NET-SNMP-EXTEND-MIB.txt:nsExtendOutput2Table     OBJECT-TYPE
+./SNMP-USM-DH-OBJECTS-MIB.txt:usmDHUserKeyTable OBJECT-TYPE
+./SNMP-USM-DH-OBJECTS-MIB.txt:usmDHKickstartTable OBJECT-TYPE
+./IF-MIB.txt:ifTableLastChange  OBJECT-TYPE
+./IF-MIB.txt:ifTable OBJECT-TYPE
+./IF-MIB.txt:ifXTable        OBJECT-TYPE
+./IF-MIB.txt:ifStackTable  OBJECT-TYPE
+./IF-MIB.txt:ifRcvAddressTable  OBJECT-TYPE
+./IF-MIB.txt:ifTestTable   OBJECT-TYPE
+./NET-SNMP-PASS-MIB.txt:netSnmpPassTable OBJECT-TYPE
+./SNMPv2-MIB.txt:sysORTable OBJECT-TYPE
+./SNMP-NOTIFICATION-MIB.txt:snmpNotifyTable OBJECT-TYPE
+./SNMP-NOTIFICATION-MIB.txt:snmpNotifyFilterProfileTable OBJECT-TYPE
+./SNMP-NOTIFICATION-MIB.txt:snmpNotifyFilterTable OBJECT-TYPE
+./IF-INVERTED-STACK-MIB.txt:ifInvStackTable  OBJECT-TYPE
+./IPV6-ICMP-MIB.txt: ipv6IfIcmpTable OBJECT-TYPE
+./NETWORK-SERVICES-MIB.txt:applTable OBJECT-TYPE
+./NETWORK-SERVICES-MIB.txt:assocTable OBJECT-TYPE
+./SNMP-COMMUNITY-MIB.txt:snmpCommunityTable OBJECT-TYPE
+./SNMP-COMMUNITY-MIB.txt:snmpTargetAddrExtTable OBJECT-TYPE
+./DISMAN-SCHEDULE-MIB.txt:schedTable OBJECT-TYPE
+./RFC1213-MIB.txt:ifTable OBJECT-TYPE
+./RFC1213-MIB.txt:atTable OBJECT-TYPE
+./RFC1213-MIB.txt:ipAddrTable OBJECT-TYPE
+./RFC1213-MIB.txt:ipRouteTable OBJECT-TYPE
+./RFC1213-MIB.txt:ipNetToMediaTable OBJECT-TYPE
+./RFC1213-MIB.txt:tcpConnTable OBJECT-TYPE
+./RFC1213-MIB.txt:udpTable OBJECT-TYPE
+./RFC1213-MIB.txt:egpNeighTable OBJECT-TYPE
+./NOTIFICATION-LOG-MIB.txt:nlmConfigLogTable OBJECT-TYPE
+./NOTIFICATION-LOG-MIB.txt:nlmStatsLogTable OBJECT-TYPE
+./NOTIFICATION-LOG-MIB.txt:nlmLogTable OBJECT-TYPE
+./NOTIFICATION-LOG-MIB.txt:nlmLogVariableTable OBJECT-TYPE
+./IP-MIB.txt:ipv4InterfaceTableLastChange OBJECT-TYPE
+./IP-MIB.txt:ipv4InterfaceTable OBJECT-TYPE
+./IP-MIB.txt:ipv6InterfaceTableLastChange OBJECT-TYPE
+./IP-MIB.txt:ipv6InterfaceTable OBJECT-TYPE
+./IP-MIB.txt:ipSystemStatsTable OBJECT-TYPE
+./IP-MIB.txt:ipIfStatsTableLastChange OBJECT-TYPE
+./IP-MIB.txt:ipIfStatsTable OBJECT-TYPE
+./IP-MIB.txt:ipAddressPrefixTable OBJECT-TYPE
+./IP-MIB.txt:ipAddressTable OBJECT-TYPE
+./IP-MIB.txt:ipNetToPhysicalTable OBJECT-TYPE
+./IP-MIB.txt:ipv6ScopeZoneIndexTable OBJECT-TYPE
+./IP-MIB.txt:ipDefaultRouterTable OBJECT-TYPE
+./IP-MIB.txt:ipv6RouterAdvertTable OBJECT-TYPE
+./IP-MIB.txt:icmpStatsTable OBJECT-TYPE
+./IP-MIB.txt:icmpMsgStatsTable OBJECT-TYPE
+./IP-MIB.txt:ipAddrTable OBJECT-TYPE
+./IP-MIB.txt:ipNetToMediaTable OBJECT-TYPE
+./AGENTX-MIB.txt: agentxConnTableLastChange OBJECT-TYPE
+./AGENTX-MIB.txt: agentxConnectionTable OBJECT-TYPE
+./AGENTX-MIB.txt: agentxSessionTableLastChange OBJECT-TYPE
+./AGENTX-MIB.txt: agentxSessionTable OBJECT-TYPE
+./AGENTX-MIB.txt: agentxRegistrationTableLastChange OBJECT-TYPE
+./AGENTX-MIB.txt: agentxRegistrationTable OBJECT-TYPE
+
+

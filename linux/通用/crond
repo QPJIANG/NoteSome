@@ -1,0 +1,40 @@
+配置文件路径：/etc/cron.d/
+修改配置后需重启生效
+
+基本格式 :
+*　　*　　*　　*　　*　　command
+分　 时　 日　 月　 周　 命令
+
+第1列表示分钟1～59 每分钟用*或者 */1表示
+第2列表示小时1～23（0表示0点）
+第3列表示日期1～31
+第4列表示月份1～12
+第5列标识号星期0～6（0表示星期天）
+第6列要运行的命令
+examples:
+1.每天早上6点10分 :　　10 6 * * * date
+2.晚上11点到早上8点之间每两个小时，早上8点: 0 23-7/2，8 * * * date
+3.每个月的4号和每个礼拜的礼拜一到礼拜三的早上11点:　　0 11 4 * mon-wed date
+
+crontab基本用法:
+
+1. crontab -l
+列出当前的crontab任务
+
+2. crontab -d
+删除当前的crontab任务
+
+3. crontab -e (solaris5.8上面是 crontab -r)
+编辑一个crontab任务,ctrl_D结束
+
+4. crontab filename
+以filename做为crontab的任务列表文件并载入
+
+
+
+/etc/anacrontab(anacron)
+配置：
+cron.daily
+cron.hourly
+cron.monthly
+cron.weekly

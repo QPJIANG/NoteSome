@@ -1,0 +1,43 @@
+git clone :   CAfile
+
+export GIT_SSL_NO_VERIFY=1
+
+
+git忽略文件
+.gitignore  保存要忽略的文件
+    filename
+    *.filetype 
+    dir/       
+
+
+git diff : 工作区与缓存区
+git diff --cached: 缓存区与版本库
+git diff HEAD: 工作区与版本库
+
+
+git checkout : 缓存->工作区
+git checkout HEAD : 版本库-> 缓存区: 缓存区->工作区
+
+
+git checkout -- .  : 如果缓存区没有数据,则从版本库去.(当前目录)
+
+git branch branch_name: 创建分支
+
+git branch -v:  查看分支
+
+git branch branch_name: 切换分支
+
+git log --oneline --graph   : 日志
+
+git checkout -b branch_name: 创建分支并切换分支
+
+git merge branch_name: 整合分支到当前分支
+
+git branch -d branch_name: 删除分支
+
+git stash: 存储(工作区变干净) == git stash save
+git stash list: 查看存储
+git stash apply: 恢复存储
+git stash clear: 清除存储
+
+

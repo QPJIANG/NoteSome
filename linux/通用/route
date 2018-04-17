@@ -1,0 +1,8 @@
+http://blog.csdn.net/moreorless/article/details/5397427
+
+
+添加路由
+route add -net 192.168.2.0/24 gw 192.168.2.254
+route add -host 192.168.1.1 dev 192.168.0.1
+删除路由
+route del -net 192.168.0.0/24 gw 192.168.0.1
