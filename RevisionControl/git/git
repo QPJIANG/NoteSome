@@ -41,3 +41,56 @@ git stash apply: 恢复存储
 git stash clear: 清除存储
 
 
+#create local Repository
+git init 
+
+#
+git add files
+
+# commit to local Repository
+(git commit -a命令会自动添加所有修改的文件（新建的文件不包含在内）)
+git commit -m "message"
+
+
+# add remote ssh Repository
+git remote add remote_name  username@host:/branch_path   
+
+# push to remote Repository
+git push  (after commit)
+
+# sync remote Repository
+git pull
+
+
+
+# 版本回退
+# 用HEAD表示当前版本
+
+# 上一个版本就是HEAD^，  (git reset --hard HEAD^)
+
+#上上一个版本就是HEAD^^
+
+# 往上100个版本  HEAD~100。
+
+git reset : 
+
+
+# git reset --hard 3628164   : reset by commit id
+
+# git reflog : op log
+
+
+
+-------------------------------------------------------------------------
+git不允许用push操作更新non-bare的仓库，因为这样的操作会导致remote仓库的索引 （index）和工作树（work tree）与你push的不一致，
+此时需要通过‘git reset –hard’操作来使得工作树与HEAD索引相匹配。 
+可以通过在remote端，设置git的配置文件（.git/config），在其中添加如下内容： 
+[receive]
+
+denyCurrentBranch = false
+
+这样就可以通过git push提交自己的稳定更新，要想在push后在remote端看到更新的效果，执行git reset –hard即可。
+
+https://blog.csdn.net/leichelle/article/details/27378195
+
+
