@@ -42,11 +42,14 @@
 	yaourt remmina-plugin-rdesktop
 
 
-
 # conky
 
 	# pacman -S  conky
 	# pacman -S  conky-manager
 
+pamac-aur
 
+```
+# pacman -S pamac-aur
+```
 
