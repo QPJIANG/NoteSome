@@ -41,7 +41,6 @@
 	
 	yaourt remmina-plugin-rdesktop
 
-
 # conky
 
 	# pacman -S  conky
@@ -51,5 +50,11 @@ pamac-aur
 
 ```
 # pacman -S pamac-aur
+```
+
+Typora
+
+```
+yaourt Typora
 ```
 
