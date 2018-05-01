@@ -33,7 +33,7 @@
 
 # shadowsocks-qt5
 
-	yaourt shadowsock
+	yaourt shadowsocks-qt
 
 # remmina
 
@@ -58,3 +58,9 @@ Typora
 yaourt Typora
 ```
 
+snapd
+
+```
+yaourt -S snapd  # 需要从golang.org 下载依赖 （需要搭梯子）
+sudo systemctl enable snapd.socket
+```
