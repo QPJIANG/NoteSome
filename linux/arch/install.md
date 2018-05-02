@@ -21,7 +21,7 @@
       wpa_supplicant - Wi-Fi Protected Access client and IEEE 802.1X supplicant
       SYNOPSIS
       wpa_supplicant [ -BddfhKLqqsTtuvW ] [ -iifname ] [ -cconfig file ] [ -D driver ] [ -PPID_file ] [ -f output file ]
-
+      
       https://segmentfault.com/a/1190000011579147
       wpa_supplicant是一个连接、配置WIFI的工具，它主要包含wpa_supplicant与wpa_cli两个程序。通常情况下，可以通过wpa_cli来进行WIFI的配置与连接，如果有特殊的需要，可以编写应用程序直接调用wpa_supplicant的接口直接开发。
 
@@ -180,3 +180,11 @@ netctl start ens192
 
 # pacman -S networkmanager
 # systemctl enable NetworkManager
+
+
+
+
+
+一篇教程：
+
+http://bbs.archlinuxcn.org/viewtopic.php?id=1037
