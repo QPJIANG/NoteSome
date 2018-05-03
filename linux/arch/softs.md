@@ -3,6 +3,7 @@
 	pacman -S  fcitx
 	pacman -S  fcitx-im
 	pacman -S  fcitx-googlepinyin
+	pacman -S fcitx-configtool
 	
 	~/.xprofile
 	export LC_ALL=zh_CN.UTF-8
@@ -26,6 +27,16 @@
 	
 	pacman -Syu
 	pacman -S yaourt
+	
+	-----------------------------------------
+	    fail to install rchlinuxcn-keyring
+	    pacman -Syu haveged
+	    systemctl start haveged
+	    systemctl enable haveged
+	
+	    rm -fr /etc/pacman.d/gnupg
+	    pacman-key --init
+	    pacman-key --populate archlinux
 
 # google-chrome
 
