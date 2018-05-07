@@ -26,7 +26,6 @@
 	
 	# umount mount_point_path
 
-
 ​	
 ​	
 	Usage: mount -V                 : print version
@@ -59,4 +58,13 @@
 	       mount --make-runbindable dir
 	A device can be given by name, say /dev/hda1 or /dev/cdrom,
 	or by label, using  -L label  or by uuid, using  -U uuid .
-	Other options: [-nfFrsvw] [-o options] [-p passwdfd].
+	Other options: [-nfFrsvw][-o options] [-p passwdfd].
+
+
+
+## umount
+
+	umount /mountpoint
+	
+	device is busy:
+	fuser
