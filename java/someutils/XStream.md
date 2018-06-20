@@ -1,0 +1,1 @@
+XStream is a simple library to serialize objects to XML and back again.(http://x-stream.github.io/index.html)
