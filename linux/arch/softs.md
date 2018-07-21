@@ -75,3 +75,8 @@ snapd
 yaourt -S snapd  # 需要从golang.org 下载依赖 （需要搭梯子）
 sudo systemctl enable snapd.socket
 ```
+fish
+```
+pacman  -S  fish        #一个nice UI的shell，用来代替bash                
+						tip：使用chsh -l 查看fish的地址，使用chsh -s    /usr/bin/fish来更换用户默认shell
+```
