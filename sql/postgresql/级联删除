@@ -1,0 +1,9 @@
+
+
+```
+CASCADE： 需要级联时使用。
+truncate table_name  CASCADE;    级联清空表数据。
+drop     删除表结构/库。
+delete   删除数据。
+```
+
