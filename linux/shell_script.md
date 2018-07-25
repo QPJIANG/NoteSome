@@ -1,0 +1,5 @@
+nice
+renice
+nohup
+
+dd
