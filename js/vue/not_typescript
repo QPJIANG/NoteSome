@@ -1,0 +1,16 @@
+ie 8 不支持 vue
+
+template:
+   驼峰命名的标签 用 "-"  连接单词
+  以：  开头
+  		样式： v-bind  加在： 前
+		事件： v-on 加在： 前
+		
+``` mathematica
+		
+TabPane > Tab-Pane
+Button > i-button
+Row > i-Row
+Col > i-Col
+		
+```
