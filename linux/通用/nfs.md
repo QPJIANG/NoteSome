@@ -1,4 +1,15 @@
 ## 1. 安装 nfs server
+
+```
+yum install -y nfs-utils  rpcbind
+
+rpcbind.service
+nfs.service
+
+```
+
+
+
 ## 2. 配置 nfs server
 
 ```
