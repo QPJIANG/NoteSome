@@ -80,3 +80,13 @@ fish
 pacman  -S  fish        #一个nice UI的shell，用来代替bash                
 						tip：使用chsh -l 查看fish的地址，使用chsh -s    /usr/bin/fish来更换用户默认shell
 ```
+
+```
+ifconfig,route在net-tools中
+nslookup,dig在dnsutils中
+ftp,telnet等在inetutils中
+ip命令在iproute2中。   
+
+# pacman -S net-tools dnsutils inetutils iproute2
+```
+

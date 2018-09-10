@@ -6,9 +6,9 @@
 
      /etc/samba/smb.conf
      在最后面加上以下内容
-
+    
      security = share
-
+    
     [share]
     comment = share
     path = /home/wsd/software(设置成你要共享的文件路径)
@@ -17,7 +17,7 @@
     public = yes
     writable = yes
     create mask = 0777
-
+    
     把/home/wsd/software文件修改成777权限（所有操作都可以执行），执行命令：
     chmod 777 /home/wsd/software
 
@@ -29,25 +29,25 @@
 
 # 带用户控制
     /etc/samba/smb.conf
-
+    
     [myshare1]
     comment = myshare1
     path = /data
     browsable = yes
     writable = yes
     create mask = 0777
-
+    
     [myshare2]
     comment = myshare2
     path = /code
     browsable = yes
     writable = yes
     create mask = 0777
-
+    
     cd /etc/samba 
     touch smbpasswd
     smbpasswd -a sambauser
-
+    
     /etc/init.d/smbd restart
     smbclient -L \\127.0.0.1 -U sambauser
 
@@ -57,4 +57,17 @@
     smbpasswd -e 恢复用户，解冻用户，
     可以在使用smbpasswd -n 把用户的密码设置成空.  要在global中写入 null passwords -true
     smbpasswd -x 删除用户
+
+
+
+
+
+```
+samba 无密码访问
+https://blog.csdn.net/u013814949/article/details/41850979
+
+security = user 
+map to guest = Bad User  
+#samba v4.1.1版本不支持share和server，当security设置为 user后需要加一行map to guest = Bad User才能允许无密码访问。
+```
 
