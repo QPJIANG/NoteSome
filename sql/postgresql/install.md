@@ -11,7 +11,7 @@ pgsql/bin 下包含相应命令。
 初始化：
 
 ```
-bin/initdb -d 数据存储目录
+bin/initdb -D 数据存储目录
 ```
 
 启动/停止：
