@@ -2,6 +2,8 @@
 
 解压二进制包：
 
+修改解压内容所有者为数据库管理员。
+
 pgsql/bin 下包含相应命令。
 
 ```
@@ -17,7 +19,7 @@ bin/initdb -D 数据存储目录
 启动/停止：
 
 ```
-bin/pg_ctl -D 数据存储目录 -l logfile start  (-l -l logfile 可不是用 )
+bin/pg_ctl -D 数据存储目录 -l logfile start  (-l -l logfile 可不使用用 )
 
 bin/pg_ctl -D 数据存储目录  stop 
 ```

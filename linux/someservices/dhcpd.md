@@ -7,6 +7,9 @@ DHCPServer : 67
 DHCP Client : 68
 546号端口用于DHCPv6 Client
 也就是自动的将网路参数正确的分配给网域中的每部电脑，让用户端的电脑可以在开机的时候就立即自动的设定好网路的参数值，这些参数值可以包括了 IP、netmask、network、gateway与 DNS 的位址等等。
+
+网络安装操作系统：指定引导程序
+
 ```
 
 工作原理：
