@@ -71,3 +71,19 @@ https://www.cnblogs.com/likwo/archive/2010/09/08/1821232.html
     svn revert --recursive folder:  取消add
     
     svn add . --no-ignore --force :递归目录下所有文件
+
+日常问题：
+
+```
+svn错误:a peg revision is not allowed here解决方法
+原因说明：需要提交的文件的文件名包含“@”
+解决方法：在文件名后加@，并且在中间的@前加\
+```
+
+
+
+create branch:
+
+
+
+svn copy http://example.com/repos/project/trunk http://example.com/repos/project/branches/beta

@@ -28,5 +28,10 @@ launch an eclipse application  可直接运行出窗口.
 
 
 
+
+GLib-CRITICAL **: XXXXX :assertion 'in != NULL' failed 
+
+export SWT_GTK3=0
+
 ```
 
