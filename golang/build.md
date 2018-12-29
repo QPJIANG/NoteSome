@@ -23,3 +23,10 @@ SET CGO_ENABLED=0SET GOOS=darwin3 SET GOARCH=amd64 go build test.go
 SET CGO_ENABLED=0 SET GOOS=linux SET GOARCH=amd64 go build test.go
 ```
 
+生成单个二进制文件
+
+```
+go build -o outputpath/outputfile  go_entrance_file.go      
+需要编译多个命令，指定不同的入口文件，及不同的输出文件。
+```
+
