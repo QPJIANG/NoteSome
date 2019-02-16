@@ -14,7 +14,7 @@ n 参数告诉netcat 不要使用DNS反向查询IP地址的域名
 
 
 usage: nc [-46bCDdhjklnrStUuvZz] [-I length] [-i interval] [-O length]
-	  [-P proxy_username] [-p source_port] [-q seconds] [-s source]
+	  [-P proxy_username][-p source_port] [-q seconds][-s source]
 	  [-T toskeyword] [-V rtable] [-w timeout] [-X proxy_protocol]
 	  [-x proxy_address[:port]] [destination] [port]
 	Command Summary:

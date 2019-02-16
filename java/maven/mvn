@@ -36,3 +36,38 @@ mvn clean : clean target path
         -DarchetypeArtifactId=maven-archetype-webapp \
         -DgroupId=com.mycompany.app \
         -DartifactId=my-webapp
+
+
+
+```
+mvn archetype:generate \
+    -DarchetypeGroupId=org.apache.maven.archetypes \
+    -DarchetypeArtifactId=maven-archetype-webapp \
+    -DgroupId=com.mycompany.app \
+    -DartifactId=my-webapp
+```
+
+maven  源：
+
+[ https://mvnrepository.com/repos ]
+
+http://repo.spring.io/libs-release/
+http://jcenter.bintray.com/
+http://central.maven.org/maven2/
+https://oss.sonatype.org/content/repositories/releases/
+http://repo.spring.io/libs-milestone/
+http://repo.hortonworks.com/content/repositories/releases/
+http://maven.ibiblio.org/maven2/
+
+[ https://repo.spring.io/webapp/#/home ]
+
+
+
+```
+一些问题：
+
+创建项目是卡住： Generating project in Interactive mode 
+加个参数 -DarchetypeCatalog=internal  让它不要从远程服务器上取catalog:
+
+```
+

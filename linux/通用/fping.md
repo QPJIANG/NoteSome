@@ -1,4 +1,20 @@
 ```
+fping 源码编译：
+1. 下载源码并解压
+2. 进入解压目录
+	./configure
+	make
+	会在src 目录下生成fping 二进制文件。
+	
+执行端口扫描时权限错误：can't create socket (must run as root?) : Permission denied
+# note: 尝试 sudo setcap cap_net_raw+ep fping  无果
+
+# chown root:root/普通用户 fping
+# chmod 6755 fping
+# chmod +s fping
+
+
+
 fping -i 1  -C 4 -q  -g  net
 
 -q

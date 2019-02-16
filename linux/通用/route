@@ -1,8 +1,18 @@
-http://blog.csdn.net/moreorless/article/details/5397427
-
+参考：
+http://blog.chinaunix.net/uid-26683523-id-3211526.html
+https://blog.csdn.net/moreorless/article/details/5397427
+https://blog.csdn.net/chenlycly/article/details/52141854
 
 添加路由
 route add -net 192.168.2.0/24 gw 192.168.2.254
-route add -host 192.168.1.1 dev 192.168.0.1
+route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.3.1
+route add -host 192.168.1.1 dev eth0
+
 删除路由
 route del -net 192.168.0.0/24 gw 192.168.0.1
+
+删除掉第一条默认路由
+route del default
+
+添加默认路由
+route add default gw 192.168.3.1

@@ -18,6 +18,8 @@ resolvedep：显示rpm软件包的依赖关系；
 localinstall：安装本地的rpm软件包；
 localupdate：显示本地rpm软件包进行更新；
 deplist：显示rpm软件包的所有依赖关系。
+
+yum --help: 查看所有参数
 ```
 
 
@@ -31,4 +33,13 @@ deplist：显示rpm软件包的所有依赖关系。
 
 resolve下载依赖
 # yumdownloader <package-name> --resolve 
+
+yum install --downloadonly --downloaddir=/tmp <package-name> 
 ```
+
+
+```
+检查包是否安装
+yum list installed <packname> 
+```
+
