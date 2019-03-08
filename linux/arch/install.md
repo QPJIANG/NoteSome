@@ -1,4 +1,5 @@
-1. 键盘布局
+1. 
+2. 键盘布局
 ```
   控制台键盘布局 默认为us（美式键盘映射）。
   如果您正在使用非美式键盘布局，通过以下的命令选择相应的键盘映射表：
@@ -192,3 +193,57 @@ netctl start ens192
 一篇教程：
 
 http://bbs.archlinuxcn.org/viewtopic.php?id=1037
+
+额外参考：
+
+http://bbs.archlinuxcn.org/viewtopic.php?id=1037
+https://www.cnblogs.com/bluestorm/p/5929172.html
+
+
+gnome:
+```
+pacman -S gnome gnome-extra   
+然后安装gdm登录管理器 (可使用其他登录器)  
+pacman -S gnome gdm   
+将gdm设置为开机自启动，这样开机时会自动载入桌面   
+systemctl enable gdm
+```
+  deepin:
+```
+pacman -S deepin deepin-extra lightdm  （配置见前文）
+```
+kde:
+```
+基础包
+pacman -S plasma
+完整包
+pacman -S plasma-meta
+最简安装（仅有桌面软件）
+pacman -S plasma-desktop
+
+然后是登录管理器SDDM
+pacman -S sddm
+
+将SDDM设置为开机自启动
+systemctl enable sddm
+
+```
+xfce:
+```
+LXDM是个桌面管理器，用来登录系统及启动XFCE桌面。
+pacman -S lxdm 
+systemctl enable lxdm.service
+
+安装XFCE4
+pacman -S xfce4
+startxfce4 
+```
+LXDE桌面
+```
+安装LXDM管理器和LXDE桌面：
+# pacman -S lxdm lxde
+
+设置lxdm开机启动：
+# systemctl enable lxdm
+```
+
