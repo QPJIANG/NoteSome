@@ -21,6 +21,10 @@ pacman：
 	pacman -Scc ： 清除缓存
 	
 	pacman -Syu ：升级系统的包
+	
+	pacman -Qm: 查找不在官方库安装的软件包
+	
+	pacman -Qk，pacman -Qkk: 检查安装的包是否缺少文件
 
 
 
