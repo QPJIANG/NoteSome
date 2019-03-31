@@ -90,3 +90,10 @@ ip命令在iproute2中。 
 # pacman -S net-tools dnsutils inetutils iproute2
 ```
 
+
+
+
+
+ pacman -Rcns gnome
+
+sudo pacman -Rs $(pacman -Qqdt) 
