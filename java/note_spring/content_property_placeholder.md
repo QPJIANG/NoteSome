@@ -22,7 +22,8 @@
 
 ```properties
 #jdbc配置 
-driverClassName=com.mysql.jdbc.Driver url=jdbc:mysql://localhost:3306/test
+driverClassName=com.mysql.jdbc.Driver 
+url=jdbc:mysql://localhost:3306/test
 username=root 
 password=root
 ```
