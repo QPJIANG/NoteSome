@@ -30,3 +30,15 @@ go build -o outputpath/outputfile  go_entrance_file.go
 需要编译多个命令，指定不同的入口文件，及不同的输出文件。
 ```
 
+
+
+
+
+开发中编译：
+
+```
+设置环境变量： GOPATH，GOBIN
+
+go install go_source_file.go
+```
+
