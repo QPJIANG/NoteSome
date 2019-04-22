@@ -25,3 +25,25 @@
  
 
 可将别名alias等写入以上三个文件
+
+
+
+bash  如何获取当前文件的绝对路径
+
+```
+#!/bin/bash
+CURRENT_DIR=$(cd `dirname $0`;pwd)
+echo $CURRENT_DIR
+```
+
+
+
+source 文件获取当前文件的绝对路径 
+
+```
+#!/bin/bash
+cd $(dirname $BASH_SOURCE)
+CURRENT_DIR=$(pwd)
+echo $CURRENT_DIR
+```
+

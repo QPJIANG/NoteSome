@@ -4,6 +4,7 @@
 	pacman -S  fcitx-im
 	pacman -S  fcitx-googlepinyin
 	pacman -S fcitx-configtool
+	pacman -S fcitx-sogoupinyin
 	
 	~/.xprofile
 	export LC_ALL=zh_CN.UTF-8

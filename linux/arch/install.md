@@ -76,6 +76,22 @@
     pacstrap   /mnt base base-devel
     pacstrap  /mnt net-tools
     pacstrap  /mnt vim
+    
+    
+ios 镜像不是最新的时候可能出现 
+	(invalid or corrupted package (PGP signature))
+# pacman-key --init
+# pacman-key --populate
+# pacman -S archlinux-keyring
+# pacman -Syy
+	<xxx@xxx>  is unknown trust: 
+	(
+		/etc/pacman.conf  
+    	SigLevel = Never # Optional TrustedOnly 
+    	
+    	# pacman -Syy
+    )
+    
 ```
 #  配置系统
 
@@ -106,6 +122,29 @@
     由于我的硬盘上还有另外一个操作系统windows 7，为了检测到该系统并写到grub启动项中，还需要做下面的操作。
     # pacman -S os-prober
     # grub-mkconfig -o /boot/grub/grub.cfg
+
+UEFI 模式：（分区表类型为gpt）
+
+```
+
+mkdir -p /mnt/boot/efi              #建立efi 文件夹 
+mount /dev/sda2 /mnt/boot/efi       #挂载efi
+mkdir /boot/efi/EFI/boot
+
+切换系统 / 后执行如下操作
+
+pacman -S grub-efi-x86_64   # 该包可能不存在 
+pacman -S efibootmgr 
+pacman -S os-prober
+ 
+grub-install --efi-directory=/boot/efi --bootloader-id=grub 
+cp /boot/efi/EFI/grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi 
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+
+
+
 
 ##  Locale:    设置 /etc/locale.gen  只需移除对应行前面的注释符号（＃）即可
 
@@ -157,7 +196,7 @@
     #greeter-session=example-gtk-gnome
     And, uncomment and change it as shown below.
     greeter-session=lightdm-deepin-greeter
-    
+    （创建一个普通用户，并为相应的用户创建home 目录）
     lightdm --test-mode --debug
     
     systemctl start lightdm.service
