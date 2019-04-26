@@ -32,3 +32,21 @@ $  fcitx  : run fc
 
 2. 在profile 中加如上内容，然后通过终端启动
 
+搜狗输入法安装:
+
+参考:<https://www.cnblogs.com/JJUT/p/9956426.html>
+
+```
+sudo pacman -S fcitx
+sudo pacman -S fcitx-configtool
+sudo pacman -S fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5
+sudo pacman -S fcitx-sogoupinyin
+
+
+~/.xprofile 在其末尾添加以下几行：
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
+```
+
