@@ -1,3 +1,9 @@
+配置：
+~/.vimrc
+# 鼠标右键支持
+set mouse-=a  
+
+
 http://www.runoob.com/linux/linux-vim.html
 
 

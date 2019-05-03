@@ -32,3 +32,10 @@ index-url = http://pypi.douban.com/simple
 trusted-host=pypi.douban.com
 ```
 这样在使用pip来安装时，会默认调用该镜像。
+
+<https://pypi.tuna.tsinghua.edu.cn/simple/pip/>  pip 下载地址
+
+<https://pypi.tuna.tsinghua.edu.cn/simple/setuptools/>  setup-tools 下载地址
+
+
+
