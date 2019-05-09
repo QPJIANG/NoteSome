@@ -71,3 +71,11 @@ http://maven.ibiblio.org/maven2/
 
 ```
 
+
+
+
+
+```
+<scope>provided</scope>，因为provided表明该包只在编译和测试的时候
+```
+
