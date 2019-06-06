@@ -52,3 +52,4 @@ pacman：
 $ yaourt -Qdt
 ```
 
+pacman -Qlk  检查包是否损坏: sudo pacman -Qlk| grep "missing files"| grep -v "0 missing files"
