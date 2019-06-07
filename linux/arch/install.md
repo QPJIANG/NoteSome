@@ -286,3 +286,6 @@ LXDE桌面
 # systemctl enable lxdm
 ```
 
+
+
+lightdm-webkit2-greeter:   lightdm-webkit2-theme-material2
