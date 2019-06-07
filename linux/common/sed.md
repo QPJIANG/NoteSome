@@ -94,7 +94,7 @@ nl /etc/passwd | sed '2a Drink tea or ......\
 nl /etc/passwd | sed  '/root/d'  # 删除/etc/passwd所有包含root的行，其他行输出
 
 nl /etc/passwd | sed -n '/bash/{s/bash/blueshell/;p;q}'    
-# 搜索/etc/passwd,找到root对应的行，执行后面花括号中的一组命令，每个命令之间用分号分隔，这里把bash替换为blueshell，再输出这行：
+### 搜索/etc/passwd,找到root对应的行，执行后面花括号中的一组命令，每个命令之间用分号分隔，这里把bash替换为blueshell，再输出这行：
 
 
 
@@ -117,11 +117,11 @@ sed 's/要被取代的字串/新的字串/g'
 		192.168.1.100
 
 
-# 一条sed命令，删除/etc/passwd第三行到末尾的数据，并把bash替换为blueshell
+###  一条sed命令，删除/etc/passwd第三行到末尾的数据，并把bash替换为blueshell
 nl /etc/passwd | sed -e '3,$d' -e 's/bash/blueshell/'
 
 
-# 利用 sed 将 regular_express.txt 内每一行结尾若为 . 则换成 !
+###  利用 sed 将 regular_express.txt 内每一行结尾若为 . 则换成 !
 sed -i 's/\.$/\!/g' regular_express.txt	(直接修改文件内容(危险动作))
 
 利用 sed 直接在 regular_express.txt 最后一行加入『# This is a test』
@@ -132,5 +132,13 @@ https://www.cnblogs.com/jiangshitong/p/6607552.html
 https://www.cnblogs.com/-zyj/p/5763303.html
 ----------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------
+替换一个目录下所有文件中的指定字符串
+
+```
+grep old_str . -R|awk '{print $1}'| awk -F ':' '{print $1}'|xargs  sed -i "s/old_str/new_str/g" 
+```
+
+
+
 ----------------------------------------------------------------------------------
 

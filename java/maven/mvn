@@ -7,23 +7,25 @@ mvn -s path/settings.xml
 
 
 
+```
 creat java project with mvn:
-    mvn -B archetype:generate \
-        -DarchetypeGroupId=org.apache.maven.archetypes \
-        -DgroupId=com.mycompany.app \
-        -DartifactId=my-app
+    mvn -B archetype:generate  -DarchetypeGroupId=org.apache.maven.archetypes \
+        -DgroupId=com.mycompany.app   -DartifactId=my-app
+        
+        
 creat java cocument with mvn:
-    mvn archetype:generate \
-        -DarchetypeGroupId=org.apache.maven.archetypes \
-        -DarchetypeArtifactId=maven-archetype-site \
-        -DgroupId=com.mycompany.app \
+    mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes \
+        -DarchetypeArtifactId=maven-archetype-site   -DgroupId=com.mycompany.app \
         -DartifactId=my-app-site
+        
+        
 creat java webapp with mvn:
     mvn archetype:generate \
         -DarchetypeGroupId=org.apache.maven.archetypes \
         -DarchetypeArtifactId=maven-archetype-webapp \
         -DgroupId=com.mycompany.app \
         -DartifactId=my-webapp
+```
 
 
 mvn clean : clean target path
@@ -69,5 +71,13 @@ http://maven.ibiblio.org/maven2/
 创建项目是卡住： Generating project in Interactive mode 
 加个参数 -DarchetypeCatalog=internal  让它不要从远程服务器上取catalog:
 
+```
+
+
+
+
+
+```
+<scope>provided</scope>，因为provided表明该包只在编译和测试的时候
 ```
 
