@@ -2,7 +2,10 @@ docker ps   查看docker 进程
 
 sudo docker exec -it <容器名> bash
 
+- **-t:**在新容器内指定一个伪终端或终端。
+- **-i:**允许你对容器内的标准输入 (STDIN) 进行交互。
 
+ 
 
 基本帮助
 
