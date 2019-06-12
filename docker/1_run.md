@@ -2,7 +2,7 @@
 
 
 
-```
+```bash
 # docker run -d -P training/webapp python app.py 
 
 

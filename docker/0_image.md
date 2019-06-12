@@ -57,7 +57,7 @@ Status: Downloaded newer image for centos:latest
 
 删除镜像:
 
-```
+```bash
 # docker image rm centos:latest
 Error response from daemon: conflict: unable to remove repository reference "centos:latest" (must force) - container d2a788c60caa is using its referenced image 9f38484d220f
 
@@ -83,7 +83,7 @@ Deleted: sha256:9f38484d220fa527b1fb19747638497179500a1bed8bf0498eb788229229e6e1
 
 更新镜像之前，我们需要使用镜像来创建一个容器。
 
-```
+```bash
 1. 运行镜像
 2. 修改container
 3. 提交container 得到新的镜像
@@ -112,7 +112,7 @@ centos              latest              9f38484d220f        2 months ago        
 
 ```
 
-```
+```bash
 docker commit
 
 -m:提交的描述信息

@@ -1,44 +1,52 @@
 1. 
 2. 键盘布局
-```
-  控制台键盘布局 默认为us（美式键盘映射）。
-  如果您正在使用非美式键盘布局，通过以下的命令选择相应的键盘映射表：
-  # loadkeys layout
-```
-2. 验证启动模式
-```
-  如果以在 UEFI 主板上启用 UEFI 模式, Archiso 将会使用 systemd-boot 来启动 Arch Linux。可以列出 efivars 目录以验证启动模式:
-
-  # ls /sys/firmware/efi/efivars
-  如果目录不存在，系统可能以 BIOS 或 CSM 模式启动
-```
-3. 连接到因特网
-```
-  (有线)护进程 dhcpcd 已被默认启用来探测有线设备, 并会尝试连接。
-  如需验证网络是否正常, 可以使用 ping:
-
-  (无线)
+   
+   ```
+   控制台键盘布局 默认为us（美式键盘映射）。
+   如果您正在使用非美式键盘布局，通过以下的命令选择相应的键盘映射表：
+   # loadkeys layout
+   ```
+3. 验证启动模式
+   
+   ```
+   如果以在 UEFI 主板上启用 UEFI 模式, Archiso 将会使用 systemd-boot 来启动 Arch Linux。可以列出 efivars 目录以验证启动模式:
+   
+   # ls /sys/firmware/efi/efivars
+   如果目录不存在，系统可能以 BIOS 或 CSM 模式启动
+   ```
+4. 连接到因特网
+   
+   ```
+   (有线)护进程 dhcpcd 已被默认启用来探测有线设备, 并会尝试连接。
+   如需验证网络是否正常, 可以使用 ping:
+   
+   (无线)
      wpa-cli
-
+   
       wpa_supplicant - Wi-Fi Protected Access client and IEEE 802.1X supplicant
       SYNOPSIS
       wpa_supplicant [ -BddfhKLqqsTtuvW ] [ -iifname ] [ -cconfig file ] [ -D driver ] [ -PPID_file ] [ -f output file ]
-      
+   
       https://segmentfault.com/a/1190000011579147
       wpa_supplicant是一个连接、配置WIFI的工具，它主要包含wpa_supplicant与wpa_cli两个程序。通常情况下，可以通过wpa_cli来进行WIFI的配置与连接，如果有特殊的需要，可以编写应用程序直接调用wpa_supplicant的接口直接开发。
-
+   ```
 
       # wpa_cli -i wlan0 scan             // 搜索附近wifi网络
       # wpa_cli -i wlan0 scan_result      // 打印搜索wifi网络结果
       # wpa_cli -i wlan0 add_network      // 添加一个网络连接
+
 ```
 4. 更新系统时间
 ```
+
   用 systemd-timesyncd 确保系统时间是正确的：
-  # timedatectl set-ntp true
+
+# timedatectl set-ntp true
+
 ```
 5. 建立硬盘分区
 ```
+
   fdisk -l
 
   对于一个选定的设备，以下的分区是必须要有的:
@@ -48,50 +56,64 @@
   Swap 可以在一个独立的分区上设置，也可以直接建立 交换文件.
   如需修改分区表,使用 fdisk 或 parted. 查看Partitioning (简体中文)以获得更多详情.
   如果需要需要创建多级存储例如 LVM、LUKS 或 RAID，请在此时完成。
+
 ```
 6. 格式化分区
 ```
+
   mkfs.ext4 /dev/sdaX
+
 ```
 7. 挂载分区
 ```
+
   mount /dev/sdaX /mnt
+
 ```
   如果使用多个分区，还需要为其他分区创建目录并挂载它们（/mnt/boot、/mnt/home、……）。
 ```
+
     # mkdir /mnt/boot
     # mount /dev/sda2 /mnt/boot
+
 ```
   genfstab 将会自动检测挂载的文件系统和 swap 分区。
 
 8. 选择镜像
 ```
+
     编辑 /etc/pacman.d/mirrorlist
     cd /etc/pacman.d ; cp mirrorlist mirrorlist.back
     cat mirrorlist.back | grep 163 > mirrorlist
+
 ```
 9. 安装基本系统
 ```
+
     pacstrap   /mnt base   (仅安装基础系统)
     pacstrap   /mnt base base-devel
     pacstrap  /mnt net-tools
     pacstrap  /mnt vim
-    
-    
+
 ios 镜像不是最新的时候可能出现 
-	(invalid or corrupted package (PGP signature))
-# pacman-key --init
-# pacman-key --populate
-# pacman -S archlinux-keyring
-# pacman -Syy
-	<xxx@xxx>  is unknown trust: 
-	(
-		/etc/pacman.conf  
-    	SigLevel = Never # Optional TrustedOnly 
-    	
-    	# pacman -Syy
-    )
+    (invalid or corrupted package (PGP signature))
+
+### pacman-key --init
+
+### pacman-key --populate
+
+### pacman -S archlinux-keyring
+
+### pacman -Syy
+
+    <xxx@xxx>  is unknown trust: 
+    (
+        /etc/pacman.conf  
+        SigLevel = Never # Optional TrustedOnly 
     
+        # pacman -Syy
+    )
+
 ```
 #  配置系统
 
@@ -115,8 +137,8 @@ ios 镜像不是最新的时候可能出现
     我的主板是BIOS主板，这里采用的 bootloader 是Grub；安装 grub 包，并执行 grub-install 已安装到 MBR：
     # pacman -S grub
     # grub-install --target=i386-pc --recheck /dev/sdb
-    
-    #	pacman -S intel-ucode
+
+    #    pacman -S intel-ucode
     # grub-install --boot-directory=/mnt/boot /dev/sdb
     注意：须根据实际分区自行调整 /dev/sdb, 切勿在块设备后附加数字，比如 /dev/sdb1 就不对。
     由于我的硬盘上还有另外一个操作系统windows 7，为了检测到该系统并写到grub启动项中，还需要做下面的操作。
@@ -124,7 +146,6 @@ ios 镜像不是最新的时候可能出现
     # grub-mkconfig -o /boot/grub/grub.cfg
 
 UEFI 模式：（分区表类型为gpt）
-
 ```
 
 mkdir -p /mnt/boot/efi              #建立efi 文件夹 
@@ -136,10 +157,11 @@ mkdir /boot/efi/EFI/boot
 pacman -S grub-efi-x86_64   # 该包可能不存在 
 pacman -S efibootmgr 
 pacman -S os-prober
- 
+
 grub-install --efi-directory=/boot/efi --bootloader-id=grub 
 cp /boot/efi/EFI/grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi 
 grub-mkconfig -o /boot/grub/grub.cfg
+
 ```
 
 
@@ -160,17 +182,17 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 主机名:
 
-	echo myhostname > /etc/hostname
-	
-	 vim  /etc/hosts
-	 127.0.0.1	localhost.localdomain	localhost
-	 ::1		localhost.localdomain	localhost
-	 127.0.1.1	myhostname.localdomain	myhostname
+    echo myhostname > /etc/hostname
+
+     vim  /etc/hosts
+     127.0.0.1    localhost.localdomain    localhost
+     ::1        localhost.localdomain    localhost
+     127.0.1.1    myhostname.localdomain    myhostname
 
 ##  网络配置:
 
     对新安装的系统，需要再次设置网络。具体请参考 Network configuration (简体中文) 和
-    
+
     对于 无线网络配置，安装 软件包 iw, wpa_supplicant，dialog 以及需要的 固件软件包.
 
 ##  Initramfs
@@ -188,9 +210,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
     # pacman -S xorg xorg-server
     # pacman -S deepin
     # pacman -S deepin-extra
-    
+
     ls -1 /usr/share/xgreeters/
-    
+
     vi /etc/lightdm/lightdm.conf
     Find the following line:
     #greeter-session=example-gtk-gnome
@@ -198,7 +220,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
     greeter-session=lightdm-deepin-greeter
     （创建一个普通用户，并为相应的用户创建home 目录）
     lightdm --test-mode --debug
-    
+
     systemctl start lightdm.service
     systemctl enable lightdm.service
 
@@ -207,7 +229,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 输入法:
 
-	# pacman -S fcitx fcitx-im fcitx-googlepinyi fcitx-configtool
+    # pacman -S fcitx fcitx-im fcitx-googlepinyi fcitx-configtool
 
 ## 网络:
 
@@ -241,18 +263,23 @@ https://www.cnblogs.com/bluestorm/p/5929172.html
 
 gnome:
 ```
+
 pacman -S gnome gnome-extra   
 然后安装gdm登录管理器 (可使用其他登录器)  
 pacman -S gnome gdm   
 将gdm设置为开机自启动，这样开机时会自动载入桌面   
 systemctl enable gdm
+
 ```
   deepin:
 ```
+
 pacman -S deepin deepin-extra lightdm  （配置见前文）
+
 ```
 kde:
 ```
+
 基础包
 pacman -S plasma
 完整包
@@ -269,6 +296,7 @@ systemctl enable sddm
 ```
 xfce:
 ```
+
 LXDM是个桌面管理器，用来登录系统及启动XFCE桌面。
 pacman -S lxdm 
 systemctl enable lxdm.service
@@ -276,13 +304,19 @@ systemctl enable lxdm.service
 安装XFCE4
 pacman -S xfce4
 startxfce4 
+
 ```
 LXDE桌面
 ```
+
 安装LXDM管理器和LXDE桌面：
-# pacman -S lxdm lxde
+
+### pacman -S lxdm lxde
 
 设置lxdm开机启动：
-# systemctl enable lxdm
+
+### systemctl enable lxdm
+
 ```
 
+```
