@@ -12,6 +12,8 @@ sudo apt-get install  fcitx-config-common fcitx-config-gtk
 
 cp skin dir to "/usr/share/fcitx/skin"
 
+${HOME}/.config/fcitx/skin
+
 $  fcitx  : run fc
 
 
@@ -50,3 +52,8 @@ export XMODIFIERS="@im=fcitx"
 
 ```
 
+fcitx-cloudpinyin
+
+ fcitx-configtool
+
+fcitx-googlepinyin

@@ -1,13 +1,13 @@
 1. 
 2. 键盘布局
-   
+
    ```
    控制台键盘布局 默认为us（美式键盘映射）。
    如果您正在使用非美式键盘布局，通过以下的命令选择相应的键盘映射表：
    # loadkeys layout
    ```
 3. 验证启动模式
-   
+
    ```
    如果以在 UEFI 主板上启用 UEFI 模式, Archiso 将会使用 systemd-boot 来启动 Arch Linux。可以列出 efivars 目录以验证启动模式:
    
@@ -15,7 +15,7 @@
    如果目录不存在，系统可能以 BIOS 或 CSM 模式启动
    ```
 4. 连接到因特网
-   
+
    ```
    (有线)护进程 dhcpcd 已被默认启用来探测有线设备, 并会尝试连接。
    如需验证网络是否正常, 可以使用 ping:
@@ -229,7 +229,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ## 输入法:
 
-    # pacman -S fcitx fcitx-im fcitx-googlepinyi fcitx-configtool
+    # pacman -S fcitx fcitx-im fcitx-googlepinyin fcitx-configtool
 
 ## 网络:
 
@@ -322,3 +322,5 @@ LXDE桌面
 
 
 lightdm-webkit2-greeter:   lightdm-webkit2-theme-material2
+
+```
