@@ -25,8 +25,11 @@ npm uninstall <name> [-g] [--save-dev]
 some module
 
 ```
-sudo cnpm install -g create-react-app   ; create-react-app appname(只能小写)
+sudo cnpm install -g create-react-app  
+
+create-react-app appname(只能小写)[创建工程]
 
 moment    
 andt
 ```
+

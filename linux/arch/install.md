@@ -29,17 +29,14 @@
    
       https://segmentfault.com/a/1190000011579147
       wpa_supplicant是一个连接、配置WIFI的工具，它主要包含wpa_supplicant与wpa_cli两个程序。通常情况下，可以通过wpa_cli来进行WIFI的配置与连接，如果有特殊的需要，可以编写应用程序直接调用wpa_supplicant的接口直接开发。
-   ```
-
       # wpa_cli -i wlan0 scan             // 搜索附近wifi网络
       # wpa_cli -i wlan0 scan_result      // 打印搜索wifi网络结果
       # wpa_cli -i wlan0 add_network      // 添加一个网络连接
+   ```
 
-```
 4. 更新系统时间
 ```
-
-  用 systemd-timesyncd 确保系统时间是正确的：
+用 systemd-timesyncd 确保系统时间是正确的：
 
 # timedatectl set-ntp true
 
@@ -137,7 +134,7 @@ ios 镜像不是最新的时候可能出现
     我的主板是BIOS主板，这里采用的 bootloader 是Grub；安装 grub 包，并执行 grub-install 已安装到 MBR：
     # pacman -S grub
     # grub-install --target=i386-pc --recheck /dev/sdb
-
+    
     #    pacman -S intel-ucode
     # grub-install --boot-directory=/mnt/boot /dev/sdb
     注意：须根据实际分区自行调整 /dev/sdb, 切勿在块设备后附加数字，比如 /dev/sdb1 就不对。
@@ -183,7 +180,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ## 主机名:
 
     echo myhostname > /etc/hostname
-
+    
      vim  /etc/hosts
      127.0.0.1    localhost.localdomain    localhost
      ::1        localhost.localdomain    localhost
@@ -192,7 +189,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ##  网络配置:
 
     对新安装的系统，需要再次设置网络。具体请参考 Network configuration (简体中文) 和
-
+    
     对于 无线网络配置，安装 软件包 iw, wpa_supplicant，dialog 以及需要的 固件软件包.
 
 ##  Initramfs
@@ -210,9 +207,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
     # pacman -S xorg xorg-server
     # pacman -S deepin
     # pacman -S deepin-extra
-
+    
     ls -1 /usr/share/xgreeters/
-
+    
     vi /etc/lightdm/lightdm.conf
     Find the following line:
     #greeter-session=example-gtk-gnome
@@ -220,7 +217,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
     greeter-session=lightdm-deepin-greeter
     （创建一个普通用户，并为相应的用户创建home 目录）
     lightdm --test-mode --debug
-
+    
     systemctl start lightdm.service
     systemctl enable lightdm.service
 
@@ -323,4 +320,3 @@ LXDE桌面
 
 lightdm-webkit2-greeter:   lightdm-webkit2-theme-material2
 
-```
