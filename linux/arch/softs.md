@@ -4,8 +4,8 @@
 	pacman -S  fcitx-im
 	pacman -S  fcitx-googlepinyin
 	pacman -S fcitx-configtool
-	pacman -S fcitx-sogoupinyin
-	
+	# pacman -S fcitx-sogoupinyin
+	pacman -S  fcitx-cloudpinyin
 	~/.xprofile
 	export LC_ALL=zh_CN.UTF-8
 	export GTK_IM_MODULE=fcitx
