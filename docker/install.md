@@ -50,3 +50,34 @@ service:
 ```
 
 if you want to be able to run docker as a regular user, add your user to the `docker` [user group](https://wiki.archlinux.org/index.php/User_group).
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+install:
+
+```
+# pacman -S docker
+```
+
+start service:
+
+```
+# systemctl status docker
+# systemctl start docker
+```
+
+base usage:
+
+```
+docker --help
+docker version
+docker version
+docker images
+
+```
+
+
+
+文档： https://docs.docker.com/get-started/

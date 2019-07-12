@@ -14,5 +14,7 @@
 "python.testing.pyTestEnabled": false,
 "python.testing.nosetestsEnabled": false,
 "python.testing.unittestEnabled": true,
+
+"python.jediEnabled": true,  //模块自动补全,改动后重新LOAD生效
 ```
 

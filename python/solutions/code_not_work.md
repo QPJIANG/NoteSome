@@ -23,3 +23,11 @@ sys.setdefaultencoding('utf8')
 
 ```
 
+
+
+
+
+```
+open函数指名encoding    文件读取
+```
+

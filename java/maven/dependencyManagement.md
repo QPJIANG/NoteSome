@@ -30,3 +30,13 @@ dependencyManagement 里只是声明依赖，并不实现引入，因此子项�
 <dependencyManagement>主要管理版本，对于子类继承同一个父类是很有用的，集中管理依赖版本不添加依赖关系，对于其中定义的版本，子pom不一定要继承父pom所定义的版本。
 ```
 
+
+
+
+
+
+
+```bash
+mvn dependency:tree
+```
+

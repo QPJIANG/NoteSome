@@ -66,3 +66,45 @@ https://www.cnblogs.com/janken/p/5500320.html
 7、drop database [schema名称|数据库名称];--删除数据库
 ```
 
+
+
+
+
+忘记密码：
+
+[mysqld]后面任意一行添加 skip-grant-tables
+
+重启MySQL
+
+```sql
+ use mysql;
+ update user set password=password("你的新密码") where user="root";
+ flush privileges;
+ quit
+```
+
+
+
+root用户权限丢失：
+
+```sql
+[mysqld]后面任意一行添加 skip-grant-tables ， 重启
+
+UPDATE mysql.user SET Grant_priv='Y', Super_priv='Y' WHERE User='root';
+
+FLUSH PRIVILEGES;
+
+GRANT ALL ON *.* TO 'root'@'localhost';
+
+select * from mysql.user
+
+```
+
+
+
+mysql.user  密码字段需要为加密字符串。
+
+非加密字符串时：
+
+mysql -h 127.0.0.1 -P 端口 -u root@非加盟密码   登录
+

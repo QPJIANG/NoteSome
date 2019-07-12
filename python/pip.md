@@ -39,3 +39,13 @@ trusted-host=pypi.douban.com
 
 
 
+```
+pip install -r requirements.txt
+```
+
+
+
+ [“fatal error: Python.h: No such file or directory”](https://www.cnblogs.com/eating-gourd/p/8578007.html)  ： 安装python-dev
+
+
+

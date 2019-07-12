@@ -29,3 +29,11 @@ export GOPROXY="https://athens.azurefd.net"
 // 项目下的模块名引入：  go mod init <模块名> ， import <模块名>/模块
 ```
 
+自定义项目下的包引用：
+
+```go
+模块名： go mod init 指定的模块名
+包名： 项目目录下的相对目录。
+import <模块名>.<包名>
+```
+
