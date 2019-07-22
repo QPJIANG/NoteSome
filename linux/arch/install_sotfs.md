@@ -12,3 +12,4 @@ makepkg:
 	将软件包源码下载到本地并解压或者选择用git clone下载源码
 	进入目录
 		makepkg
+

@@ -40,3 +40,15 @@ The repository located at pypi.doubanio.com is not a trusted or secure host and 
 
 ```
 
+### windows:
+
+```
+
+(1):在windows文件管理器中,输入 **%APPDATA%**
+
+(2):会定位到一个新的目录下，在该目录下新建pip文件夹，然后到pip文件夹里面去新建个pip.ini文件
+
+(3):在新建的pip.ini文件中输入以下内容，搞定文件路径：pip\pip.ini
+
+```
+
