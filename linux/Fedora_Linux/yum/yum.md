@@ -43,3 +43,14 @@ yum install --downloadonly --downloaddir=/tmp <package-name>
 yum list installed <packname> 
 ```
 
+
+
+
+
+yum 源：
+
+```
+http://mirrors.163.com/.help/centos.html
+http://mirrors.ustc.edu.cn/help/
+```
+
