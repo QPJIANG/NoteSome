@@ -1,3 +1,48 @@
+- notepadqq:
+
+  Ubuntu下的安装方法:
+
+  sudo add-apt-repository ppa:notepadqq-team/notepadqq
+
+  sudo apt-get update
+
+  sudo apt-get install notepadqq
+
+  Ubuntu下的卸载方法:
+
+  sudo apt-get remove notepadqq
+
+  sudo add-apt-repository --remove ppa:notepadqq-team/notepadqq
+
+  ```bash
+  #!/bin/bash
+    
+  # the script need run as root
+  if [ `id -u` -eq 0 ];then
+      echo "root用户!"
+  else
+      echo "非root用户!"
+      exit 0
+  fi
+  
+  add-apt-repository ppa:notepadqq-team/notepadqq
+  
+  apt-get update
+  
+  apt-get install notepadqq
+  ```
+
+  
+
+- shadowsocks
+  sudo add-apt-repository ppa:hzwhuang/ss-qt5
+  sudo apt-get update
+  sudo apt-get install shadowsocks-qt5
+
+sublime text 3 激活码：
+参考：https://blog.csdn.net/sinat_32829963/article/details/79273129
+
+```
 —– BEGIN LICENSE —– 
 Country Rebel 
 Single User License 
@@ -81,3 +126,7 @@ A20AA536 9E1A57C7 D33839DC 6613C428
 263A8906 AFBFAB46 52F6706F CACFC74E 
 DFAD4752 D10E58B6 744B90F2 13AF2B9C 
 —— END LICENSE ——
+
+
+```
+
