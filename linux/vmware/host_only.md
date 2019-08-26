@@ -6,7 +6,6 @@ root:
 
 ```
 iptables  -F    
-
 编辑/etc/sysctl.conf （root权限）
     取消注释 ： net.ipv4.ip_forward=1 
     执行 ： sudo sysctl -p     此时，网络转发功能应该就开启了
