@@ -54,3 +54,8 @@ observable， subscribe
     subscription.dispose(); // I no longer want notifications
 ```
 
+
+
+部分用法参考：
+
+<http://www.aizhengli.com/knockoutjs/knockoutjs.html?page=1>
