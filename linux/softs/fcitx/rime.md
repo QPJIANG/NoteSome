@@ -23,5 +23,7 @@ patch:
 # commit_text 已輸入的候選文字上屏並切換至西文輸入模式
 # commit_code 已輸入的編碼字符上屏並切換至西文輸入模式
 # 設爲 noop，屏蔽該切換鍵
+
+~/.config/fcitx/rime/build 下有各schema对应的默认配置 
 ```
 
