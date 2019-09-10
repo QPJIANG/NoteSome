@@ -1,0 +1,7 @@
+```
+.BUILDINFO  
+.INSTALL 
+.MTREE  
+.PKGINFO
+```
+
