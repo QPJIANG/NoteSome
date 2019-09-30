@@ -45,5 +45,10 @@ source 文件获取当前文件的绝对路径
 cd $(dirname $BASH_SOURCE)
 CURRENT_DIR=$(pwd)
 echo $CURRENT_DIR
+
+
+
+#!/bin/bash
+CURRENT_DIR=$(cd  $(dirname $BASH_SOURCE);pwd)
 ```
 

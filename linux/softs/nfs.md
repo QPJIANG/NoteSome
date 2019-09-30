@@ -73,7 +73,7 @@ nfs.service
 
 
 
-## umount
+### umount
 
 	umount /mountpoint
 	
@@ -81,6 +81,17 @@ nfs.service
 	fuser
 
 
+
+### NFS文件锁
+
+```
+https://blog.csdn.net/smst1987/article/details/6890807
+
+无可用的锁
+nfslock 服务端和客户端都需要启动这个服务.
+
+
+```
 
 
 
