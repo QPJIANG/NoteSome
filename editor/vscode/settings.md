@@ -27,3 +27,57 @@
 快捷键设置:
 
 File -> Perferience -> KeyboardShortcuts
+
+
+
+
+
+
+
+```
+//文件注释模板： psioniq File Header
+   
+"psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "FileName: <<filename>>",
+                "Project: <<projectname>>",
+                "",
+                "Author: xxx@xxx.com",
+                "File Created: <<filecreated('YYYY-MM-DD h:mm:ss ,dddd')>>",
+                "",
+                "Modified By: <<author>>",
+                "Last Modified: <<dateformat('YYYY-MM-DD h:mm:ss ,dddd')>>",
+                "",
+                "Copyright (c) <<filecreated('YYYY')>> xxxxxxxxxx."
+            ]
+        }
+    ],
+"psi-header.lang-config": [
+        {
+            "language": "javascript",
+            "begin": "",
+            "end": "",
+            "prefix": "// "
+        },
+        {
+            "language": "python",
+            "begin": "####################################################################################################",
+            "end": "####################################################################################################",
+            "prefix": "# ",
+            "suffix":"#",
+            "lineLength":100,
+            "replace":[],
+            "modAuthor":"Modified By: xxx@xxx.com",
+            "modDate":"Last Modified: <<dateformat('YYYY-MM-DD h:mm:ss ,dddd')>>",
+        }
+    ],
+"psi-header.changes-tracking":{
+        "isActive":true,
+        "modAuthor":"Modified By: xxx@xxx.com",
+        "modDate":"Last Modified: <<dateformat('YYYY-MM-DD h:mm:ss ,dddd')>>",
+        "autoHeader":"autoSave"
+    },
+```
+
