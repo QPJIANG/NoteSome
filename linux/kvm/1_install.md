@@ -27,6 +27,8 @@ systemctl enable libvirtd   #开机自起
 usermod -a -G kvm <user_name> 
 
 
+# 启动管理器
+$ virt-manager  
 ----------------------------------------------
 hostonly:
 虚拟网络：
