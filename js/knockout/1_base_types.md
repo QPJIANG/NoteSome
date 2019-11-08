@@ -13,6 +13,11 @@ push,pop,unshift,shift,reverse,sort,removeAll
 
 ko.observable(true);
 ko.observable(false)
+
+
+array:
+ko.observableArray();  
+ko.observable([]) 
 ```
 
 

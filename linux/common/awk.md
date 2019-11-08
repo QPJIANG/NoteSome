@@ -213,5 +213,25 @@ mysql        199
 root           374 
 统计/home目录下不同用户的普通文件的大小总size是多少？
 ls -l|awk 'NR!=1 && !/^d/{sum[$3]+=$5} END{for (i in sum) printf "%-6s %-5s %-3s %-2s \n",i," ",sum[i]/1024/1024,"MB"}'
+
+
+awk -v foo=hello -v bar=world 'BEGIN {print foo,bar}'
+
+
+
+```
+
+```
+https://blog.csdn.net/sunny_future/article/details/80287236
+
+df | grep "boot" | awk ' {if ($4<20000)  print "Alart" ; else print "OK"}'
+
+awk 'i=1 {} BEGIN {while (i<3) {++i;print i}}' test.txt 
+awk 'BEGIN {do {++i;print i} while (i<3)}' test.txt 
+
+awk 'BEGIN {for (i=1;i<3;i++) print i}' test.txt
+awk 'BEGIN {for (i=3;i>1;i--) print i}' test.txt
+
+
 ```
 

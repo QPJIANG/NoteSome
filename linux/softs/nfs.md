@@ -78,7 +78,16 @@ nfs.service
 	umount /mountpoint
 	
 	device is busy:
-	fuser
+	
+	参考: https://blog.csdn.net/weixin_34081595/article/details/92529756
+	fuser:
+		fuser -mv <dir>
+	lsof:
+		lsof +d	<dir>
+	
+	
+	以上方法仍不能umount:
+		umount -lf <nfs_server_ip/host>:<mount_path>
 
 
 
