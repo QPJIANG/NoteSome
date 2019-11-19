@@ -1,0 +1,4 @@
+```
+killall plasmashell && kstart5 plasmashell
+```
+
