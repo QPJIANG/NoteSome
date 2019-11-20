@@ -98,3 +98,37 @@ ip命令在iproute2中。 
  pacman -Rcns gnome
 
 sudo pacman -Rs $(pacman -Qqdt) 
+
+
+
+软件列表
+
+```
+unarchiver   解压工具
+flatpak      软件管理
+pamac-aur    软件管理
+yaourt  	 软件管理
+yay  	     软件管理
+openssh      sshd
+fcitx-im	 输入法
+flameshot    截图
+
+
+
+字体：(fc-cache -vf : 更新字体缓存)
+wqy-microhei 
+wqy-zenhei
+
+adobe-source-code-pro-fonts
+adobe-source-sans-pro-fonts
+adobe-source-serif-pro-fonts
+adobe-source-han-sans-cn-fonts
+adobe-source-han-serif-cn-fonts
+
+noto-fonts 
+noto-fonts-cjk
+
+ttf-ubuntu-font-family
+ttf-droid
+```
+
