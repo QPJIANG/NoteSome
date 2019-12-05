@@ -48,3 +48,30 @@ resize2fs /dev/sdb1 #调整分区大小
 
 4、重新挂载分区
 
+
+
+
+
+查看硬盘类型：
+
+```
+cat /sys/block/*/queue/rotational的返回值
+----------------------------------------------------------------------
+# lsblk -d -o name,rota
+NAME ROTA
+sda     1
+sdb     0
+
+rota
+	1: 机械盘
+	0：固态盘
+
+----------------------------------------------------------------------
+sudo pacman -S smartmontools
+
+sudo smartctl  --all  /dev/sd<a/b/c> |less
+Rotation Rate:   ... rpm  :机械盘
+Rotation Rate:    Solid State Device   ：固态盘
+
+```
+

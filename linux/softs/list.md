@@ -22,6 +22,14 @@
 - shadowsocks
   sudo apt-get install shadowsocks-qt5
 
+
+
+axel https://github.com/axel-download-accelerator/axel
+
+
+
+
+
 sublime text 3 激活码：
 参考：https://blog.csdn.net/sinat_32829963/article/details/79273129
 

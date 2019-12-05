@@ -59,3 +59,36 @@ observable， subscribe
 部分用法参考：
 
 <http://www.aizhengli.com/knockoutjs/knockoutjs.html?page=1>
+
+
+
+手脚架：
+
+```
+var ViewModel = function () {
+    mav = this;
+    window.mav = this;
+    
+    this.A=ko.observable("-");
+    this.B=ko.observable(true);
+    mav.ARR=ko.observableArray();   
+    
+    this.A.subscribe(function (val) {
+    	// val : new value
+    });
+    
+     ko.utils.arrayForEach([], function(el, index) {
+    	
+     });
+    
+}
+
+$(document).ready(function () {
+    ko.applyBindings(new ViewModel());
+});
+```
+
+
+
+
+

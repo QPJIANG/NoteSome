@@ -36,4 +36,22 @@ conf:
 "github.com/Unknwon/goconfig"
 ```
 
+cron:
+
+```
+github.com/robfig/cron
+```
+
+带颜色的命令行输出：
+
+```
+github.com/mgutz/ansi
+```
+
+cpuid:
+
+```
+https://github.com/intel-go/cpuid
+https://github.com/klauspost/cpuid
+```
 
