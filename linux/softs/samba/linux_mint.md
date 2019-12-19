@@ -71,3 +71,18 @@ map to guest = Bad User
 #samba v4.1.1版本不支持share和server，当security设置为 user后需要加一行map to guest = Bad User才能允许无密码访问。
 ```
 
+
+
+
+
+linux挂载：
+
+```shell
+# mount  -t cifs -o username=<smb_user>,password=<smb_passwd> //<smb_server>/<smb_label> /<local_mount_path>
+
+
+# 有时需要指定vers
+# mount  -t cifs -o username=<smb_user>,password=<smb_passwd>,vers=1.0 //<smb_server>/<smb_label> /<local_mount_path>
+
+```
+
