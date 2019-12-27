@@ -75,3 +75,14 @@ Rotation Rate:    Solid State Device   ：固态盘
 
 ```
 
+
+
+
+
+```
+硬盘阵列
+硬盘分区管理
+硬盘卷管理
+硬盘配额管理  （quote）
+```
+

@@ -28,3 +28,4 @@ SFTP   liximomo.sftp
 
 
 可配置多个同步路径
+

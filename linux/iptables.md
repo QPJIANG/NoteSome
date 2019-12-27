@@ -6,6 +6,12 @@
 
 
 
+```
+iptables 管理内核的netfilter
+```
+
+
+
 防火墙服务
 
 ```bash
@@ -81,5 +87,42 @@ iptables -A INPUT -p icmp  --icmp-type 8  -j DROP
 ```
 允许合法网段ip接入
 iptables -A INPUT -s <10.0.0.0/24> -p  all -j ACCEPT 
+```
+
+
+
+
+
+
+
+nat 分snat 和dnat  : 
+
+e参考:
+
+<http://www.zsythink.net/archives/1764>
+
+<https://blog.51cto.com/13162375/2103512>
+
+```
+虚拟机使用 hostonly 网络环境：
+
+宿主机：
+
+snat:  (实现虚拟机上外网)
+# iptables -N fw-open
+# iptables -A FORWARD -j fw-open 
+# iptables -t nat -A POSTROUTING -o <hostonly网卡>  -s 192.168.4.0/24 -j MASQUERADE
+(iptables -t nat -A POSTROUTING -o <hostonly网卡>  -s (虚拟机网段) -j MASQUERADE)
+
+
+dnat:    (参考 https://www.cnblogs.com/jjzd/p/6505871.html)
+（
+实现虚拟机中的端口能被宿主机所在局域网的其他网络设备访问。
+注：宿主机不能通过<宿主机ip>：<宿主机端口> 访问虚拟机端口
+）
+# iptables -t nat -A PREROUTING -d <宿主机ip> -p tcp -m tcp --dport <宿主机端口>  -j DNAT --to-destination 192.168.4.11:22
+
+（iptables -t nat -A PREROUTING -d <宿主机ip> -p tcp -m tcp --dport <宿主机端口>  -j DNAT --to-destination <虚拟机ip>:<虚拟机端口>）
+
 ```
 
