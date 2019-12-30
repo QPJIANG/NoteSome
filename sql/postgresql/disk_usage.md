@@ -1,3 +1,4 @@
+```sql
 -- 统计各数据库占用磁盘大小：
     SELECT d.datname AS Name,  pg_catalog.pg_get_userbyid(d.datdba) AS Owner,  
     CASE WHEN pg_catalog.has_database_privilege(d.datname, 'CONNECT')  
@@ -21,4 +22,6 @@
     FROM information_schema.tables  
     ORDER BY  
     pg_total_relation_size('"' || table_schema || '"."' || table_name || '"') DESC  
+
+```
 
