@@ -45,3 +45,25 @@ date -d "$(awk -F. '{print $1}' /proc/uptime) second ago" +"%Y-%m-%d %H:%M:%S"
 前三个数字大家都知道，是1、5、15分钟内的平均进程数（有人认为是系统负荷的百分比，其实不然，有些时候可以看到200甚至更多）。后面两个呢，一个的分子是正在运行的进程数，分母是进程总数；另一个是最近运行的进程ID号。
 ```
 
+
+
+```
+/sys/devices/system/cpu/cpu0/cpufreq/   
+/sys/class/hwmon
+/sys/devices/system/
+```
+
+
+
+环境变量：XDG_CURRENT_DESKTOP  用户DE
+
+
+
+```
+gsettings get org.cinnamon.theme name  桌面窗口主题
+gsettings get org.cinnamon.desktop.interface gtk-theme
+gsettings get org.cinnamon.desktop.interface icon-theme
+gsettings get org.cinnamon.desktop.interface font-name
+
+```
+
