@@ -5,7 +5,7 @@
 
 #禁用密码验证
 PasswordAuthentication no  
-打开下面3个的注释。43行
+#打开下面3个的注释。43行
 #启用密钥验证
 RSAAuthentication yes
 PubkeyAuthentication yes

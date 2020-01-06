@@ -14,6 +14,7 @@ GNOME Shell 3.32.2
 ```
 extensions	 插件列表和开关
 
+dash to dock 	: dock
 dash to panel	：panel(windows 习惯)
 
 coverflow alt+tab  :（alt-tab 切换）

@@ -18,3 +18,4 @@ install nemo
 > gsettings set org.nemo.desktop show-desktop-icons true
 
 注销账户重新登陆
+
