@@ -67,3 +67,9 @@ gsettings get org.cinnamon.desktop.interface font-name
 
 ```
 
+disk temp
+
+```
+hddtemp 
+```
+

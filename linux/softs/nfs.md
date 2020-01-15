@@ -84,8 +84,9 @@ nfs.service
 		fuser -mv <dir>
 	lsof:
 		lsof +d	<dir>
-	
-	
+
+
+​	
 	以上方法仍不能umount:
 		umount -lf <nfs_server_ip/host>:<mount_path>
 
@@ -115,5 +116,17 @@ archlinux:
 ```
 客户端和服务端都只需要安装 nfs-utils 包。
 pacman -S nfs-utils
+```
+
+
+
+
+
+```
+RHEL 8/CentOS 8系统上安装NFS服务器包：
+sudo yum -y install nfs-utils
+
+安装完成后，启动并启用nfs-server服务：
+sudo systemctl enable --now nfs-server rpcbind
 ```
 
