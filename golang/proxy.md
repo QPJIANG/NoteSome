@@ -4,5 +4,8 @@ export GO111MODULE=on
 
 
 export GOPROXY="https://athens.azurefd.net"
+
+
+export GOPROXY=https://goproxy.cn
 ```
 
