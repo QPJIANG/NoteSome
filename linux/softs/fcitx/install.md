@@ -57,3 +57,50 @@ fcitx-cloudpinyin
  fcitx-configtool
 
 fcitx-googlepinyin
+
+
+
+
+
+
+
+```
+搜狗输入法：
+sudo pacman -S fcitx-sogoupinyin
+
+.xprofile 内容：
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
+fcitx -d -r --enable sogou-qimpanel
+
+
+fcitx 添加输入法，重启。
+
+------------------------------------------------------------------------------------
+切换搜狗输入法后输入时不显示中文：
+$ sogou-qimpanel
+sogou-qimpanel: error while loading shared libraries: libfcitx-qt.so.0: cannot open shared object file: No such file or directory
+
+$ pkgfile libfcitx-qt.so.0
+archlinuxcn/fcitx-lilydjwg-git
+
+$ sudo pacman -S fcitx-lilydjwg-git
+resolving dependencies...
+looking for conflicting packages...
+:: fcitx-lilydjwg-git and fcitx are in conflict. Remove fcitx? [y/N] y
+:: fcitx-lilydjwg-git and fcitx-gtk2 are in conflict. Remove fcitx-gtk2? [y/N] y
+:: fcitx-lilydjwg-git and fcitx-gtk3 are in conflict. Remove fcitx-gtk3? [y/N] y
+
+Packages (4) fcitx-4.2.9.7-1 [removal]  fcitx-gtk2-4.2.9.7-1 [removal]  fcitx-gtk3-4.2.9.7-1 [removal]  fcitx-lilydjwg-git-2:4.2.9.7.20191107-1
+
+Total Download Size:    7.14 MiB
+Total Installed Size:  35.35 MiB
+Net Upgrade Size:       0.48 MiB
+
+:: Proceed with installation? [Y/n] 
+:: Retrieving packages...
+ 。。。。。。。。。。。。。。。。。。。。。。。。。。。
+ 
+```
+
