@@ -142,3 +142,12 @@ grep old_str . -R|awk '{print $1}'| awk -F ':' '{print $1}'|xargs  sed -i "s/old
 
 ----------------------------------------------------------------------------------
 
+```
+字符串替换
+
+
+_src="src"
+_des="desc" 
+sed -i s?"$_src"?"$_des"?g <filename>
+```
+

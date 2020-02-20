@@ -3,17 +3,51 @@ http://blog.chinaunix.net/uid-26683523-id-3211526.html
 https://blog.csdn.net/moreorless/article/details/5397427
 https://blog.csdn.net/chenlycly/article/details/52141854
 
+有多块网卡同时联网时有用（多个物理网卡[有线+无线，多有线]，vpn , 安装了虚拟机）
+
 添加路由
+
+​	
+
+```
+-net 192.168.1.0/24 
+等价于
+-net 192.168.1.0 netmask 255.255.255.0
+```
+
+```
 route add -net 192.168.2.0/24 gw 192.168.2.254
 route add -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.3.1
+route add -net 192.168.2.0/24 eth0
 route add -host 192.168.1.1 dev eth0
 
+网段路由：
+使用默认网卡
+route add -net <ip范围> gw  <网关> 
+route add -net <ip基地> netmask <子网掩码> gw <网关>
+使用指定网卡
+route add -net <ip范围> <网卡名>
+```
+
 删除路由
+
+```
 route del -net 192.168.0.0/24 gw 192.168.0.1
+route del -net 192.168.0.0/24 eth0
+
+删除使用指定网关的默认路由
+route del default gw xxx.xxx.xxx.xxx 
+```
 
 删除掉第一条默认路由
+
+```
 route del default
+```
 
 添加默认路由
+
+```
 route add default gw 192.168.3.1
+```
 

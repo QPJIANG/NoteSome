@@ -19,3 +19,4 @@ yaourt  -Syu --aur ：升级aur的包
 yaourt  -Si ：列出包的信息
 
 yaourt -Qdt : clean some useless pack
+
