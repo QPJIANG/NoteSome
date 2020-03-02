@@ -9,29 +9,33 @@ git忽略文件
     *.filetype 
     dir/       
 
-
+```
 git diff : 工作区与缓存区
 git diff --cached: 缓存区与版本库
 git diff HEAD: 工作区与版本库
 
-
 git checkout : 缓存->工作区
 git checkout HEAD : 版本库-> 缓存区: 缓存区->工作区
 
-
 git checkout -- .  : 如果缓存区没有数据,则从版本库去.(当前目录)
+git checkout -- file ： 丢弃工作区的修改，缓存区的数据不受影响，（未提交到缓存区的数据收影响）
+						提交到缓存区后，又作了修改，要受影响。
 
 git branch branch_name: 创建分支
 
 git branch -v:  查看分支
 
-git branch branch_name: 切换分支
+git checkout branch_name: 切换分支
+git switch branch_name: 切换分支
 
 git log --oneline --graph   : 日志
 
 git checkout -b branch_name: 创建分支并切换分支
+git switch -c branch_name: 创建分支并切换分支
 
 git merge branch_name: 整合分支到当前分支
+	merge: 一种情况是直接将当前分支的head 指向目标分支的head
+			另一种是，合并两个分支的修改，并做一次提交作为当前分支的head.	
 
 git branch -d branch_name: 删除分支
 
@@ -40,44 +44,74 @@ git stash list: 查看存储
 git stash apply: 恢复存储
 git stash clear: 清除存储
 
-
 #create local Repository
 git init 
+```
 
 #
 git add files
 
-# commit to local Repository
+### commit to local Repository
+```
 (git commit -a命令会自动添加所有修改的文件（新建的文件不包含在内）)
 git commit -m "message"
+```
 
 
-# add remote ssh Repository
+
+
+### add remote ssh Repository
+```
 git remote add remote_name  username@host:/branch_path   
+```
 
-# push to remote Repository
+
+
+### push to remote Repository
+```
 git push  (after commit)
+git push <branch1>  <branch2> : 本地提交推送到远程分支
+```
 
-# sync remote Repository
+
+
+### sync remote Repository
+```
 git pull
+```
 
 
 
-# 版本回退
-# 用HEAD表示当前版本
+### 版本回退
+```
+用HEAD表示当前版本 （撤销上次提交后修改的内容可回退到 HEAD）
 
-# 上一个版本就是HEAD^，  (git reset --hard HEAD^)
+上一个版本就是HEAD^，  (git reset --hard HEAD^)
 
-#上上一个版本就是HEAD^^
+上上一个版本就是HEAD^^
 
-# 往上100个版本  HEAD~100。
+往上100个版本  HEAD~100。
+```
 
-git reset : 
 
 
-# git reset --hard 3628164   : reset by commit id
+### git reset : 
 
-# git reflog : op log
+```
+# 将 head 指向某一次提交后的状态。
+# 查到某个commit id （部分匹配即可） ，可用于撤销错误的回滚。
+git reset --hard 3628164   : reset by commit id
+
+git reflog : 操作log
+```
+
+
+
+```
+--hard : 会看到磁盘上的文件内容也发生了变化。
+
+没有 --hard ,只是修改head,  磁盘内容未发生变化
+```
 
 
 
@@ -101,6 +135,9 @@ git clone -b v_version_ https://github.com/xxxx/xx.git   指定分支版本
 
 
 
-
+```
+git rebase 
+git tag
+```
 
 

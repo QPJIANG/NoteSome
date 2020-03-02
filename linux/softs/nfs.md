@@ -86,9 +86,8 @@ nfs.service
 		lsof +d	<dir>
 
 
-​	
-	以上方法仍不能umount:
-		umount -lf <nfs_server_ip/host>:<mount_path>
+​	以上方法仍不能umount:
+​		umount -lf <nfs_server_ip/host>:<mount_path>
 
 
 
