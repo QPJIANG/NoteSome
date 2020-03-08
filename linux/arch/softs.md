@@ -130,5 +130,7 @@ noto-fonts-cjk
 
 ttf-ubuntu-font-family
 ttf-droid
+
+awesome-terminal-fonts
 ```
 
