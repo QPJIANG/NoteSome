@@ -30,3 +30,11 @@ postrm
 该脚本负责修改软件包链接或文件关联，或删除由它创建的文件。
 ```
 
+
+
+```
+dpkg lock
+
+# rm /var/lib/dpkg/lock-frontend
+```
+
