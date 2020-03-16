@@ -47,3 +47,44 @@ hostonly:
     iptables -t nat -A POSTROUTING -o <上外网网卡名> -s 192.168.56.0/24 -j MASQUERADE
 ```
 
+
+
+
+
+```
+virtio-win
+```
+
+```
+$ sudo pacman -S qemu
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (11) brltty-6.0-8  celt0.5.1-0.5.1.3-4  libcacard-2.7.0-1  liblouis-3.13.0-1  libslirp-4.1.0-1  seabios-1.13.0-1  spice-0.14.2-1  usbredir-0.8.0-1  vde2-2.3.2-13
+              virglrenderer-0.8.2-1  qemu-4.2.0-2
+
+
+
+$ sudo pacman -S qemu-block-iscsi
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (2) libiscsi-1.19.0-1  qemu-block-iscsi-4.2.0-2
+
+$ sudo pacman -S qemu-arch-extra
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) qemu-arch-extra-4.2.0-2
+
+
+$ sudo pacman -S libvirt virt-manager 
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (20) augeas-1.12.0-1  ceph-libs-14.2.8-1  glusterfs-1:7.3-1  gtk-vnc-1.0.0-1  gtksourceview4-4.6.0-1  liburcu-0.11.0-1  libvirt-glib-3.0.0-1  libvirt-python-5.8.0-3  netcf-0.2.8-7
+              oath-toolkit-2.6.2-7  phodav-2.4-1  python-chardet-3.0.4-4  python-idna-2.9-1  python-requests-2.23.0-1  python-urllib3-1.25.8-2  spice-gtk-0.37-1  virt-install-2.2.1-2
+              xmlsec-1.2.29-1  libvirt-5.10.0-2  virt-manager-2.2.1-2
+
+```
+
