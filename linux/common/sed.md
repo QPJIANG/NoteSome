@@ -48,6 +48,7 @@ p ：打印，亦即将某个选择的数据印出。通常 p 会与参数 sed -
 s ：取代，可以直接进行取代的工作哩！通常这个 s 的动作可以搭配正规表示法！例如 1,20s/old/new/g 就是啦
 
 ----------------------------------------------------------------------------------
+```
 /tmp $ cat testfile 
 HELLO LINUX!  
 Linux is a free unix-type opterating system.  
@@ -64,24 +65,26 @@ HELLO LINUX!
 Linux is a free unix-type opterating system.  
 This is a linux testfile!  
 Linux test 
+```
+
+
 
 did not modify the file
 ----------------------------------------------------------------------------------
+```
 nl /etc/passwd | sed '2,5d'   # 将 /etc/passwd 的内容列出并且列印行号，同时，请将第 2~5 行删除！
 
 nl /etc/passwd | sed '2d'  # 将 /etc/passwd 的内容列出并且列印行号，同时，请将第 2 行删除！
 
-
 nl /etc/passwd | sed '3,$d'   #删除第 3 到最后一行
-
 
 nl /etc/passwd | sed '2a drink tea'  # 在第二行后(亦即是加在第三行)加上『drink tea?』字样！
 
 nl /etc/passwd | sed '2i drink tea'  # 在第二行前 加上『drink tea?』字样！
 
 nl /etc/passwd | sed '2a Drink tea or ......\
-> drink beer ?'			# 第二行后面加入两行字，例如『Drink tea or .....』与『drink beer?』	
 
+> drink beer ?'			# 第二行后面加入两行字，例如『Drink tea or .....』与『drink beer?』	
 
  nl /etc/passwd | sed '2,5c No 2-5 number' # 将第2-5行的内容取代成为『No 2-5 number』
 
@@ -94,6 +97,9 @@ nl /etc/passwd | sed '2a Drink tea or ......\
 nl /etc/passwd | sed  '/root/d'  # 删除/etc/passwd所有包含root的行，其他行输出
 
 nl /etc/passwd | sed -n '/bash/{s/bash/blueshell/;p;q}'    
+```
+
+
 ### 搜索/etc/passwd,找到root对应的行，执行后面花括号中的一组命令，每个命令之间用分号分隔，这里把bash替换为blueshell，再输出这行：
 
 
@@ -145,9 +151,17 @@ grep old_str . -R|awk '{print $1}'| awk -F ':' '{print $1}'|xargs  sed -i "s/old
 ```
 字符串替换
 
-
 _src="src"
 _des="desc" 
 sed -i s?"$_src"?"$_des"?g <filename>
+```
+
+```
+文件开头插入
+
+sed -i '1i\This is the beginning' file
+
+sed -i '1i\This is the beginning\nThis is the second' file
+
 ```
 

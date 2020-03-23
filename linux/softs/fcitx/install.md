@@ -104,3 +104,29 @@ Net Upgrade Size:       0.48 MiB
  
 ```
 
+
+
+<https://github.com/gatieme/AderXCoding/tree/master/system/tools/sougoupinyin>
+
+```
+
+方法1
+执行如下指令
+cd ~/.config
+find . -name sogou*
+find . -name Sogou*
+将两次搜索到的配置文件删除即可.
+
+一般来说, 总共有如下3个文件夹, 全部删除即可
+
+SogouPY、SogouPY.users、sogou-qimpanel
+删除这3个文件夹，然后重启搜狗.
+------------------------------------------------
+方法2：
+通过下面的命令重启搜狗输入法，看重启后是否可以正常使用：
+killall fcitx
+killall sogou-qinpanel
+fcitx
+
+```
+

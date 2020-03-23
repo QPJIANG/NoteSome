@@ -1,4 +1,4 @@
-2. 键盘布局
+1. 键盘布局
 
    ```
    控制台键盘布局 默认为us（美式键盘映射）。
@@ -59,6 +59,11 @@
 ```
 
   mkfs.ext4 /dev/sdaX
+  
+ 
+ swap 
+ # mkswap /dev/sdX2
+ # swapon /dev/sdX2
 
 ```
 7. 挂载分区
@@ -149,7 +154,7 @@ mkdir -p /mnt/boot/efi              #建立efi 文件夹
 mount /dev/sda2 /mnt/boot/efi       #挂载efi
 mkdir /boot/efi/EFI/boot
 
-切换系统 / 后执行如下操作
+*切换系统 / 后执行如下操作
 
 pacman -S grub-efi-x86_64   # 该包可能不存在 
 pacman -S efibootmgr 
@@ -158,6 +163,14 @@ pacman -S os-prober
 grub-install --efi-directory=/boot/efi --bootloader-id=grub 
 cp /boot/efi/EFI/grub/grubx64.efi /boot/efi/EFI/boot/bootx64.efi 
 grub-mkconfig -o /boot/grub/grub.cfg
+
+
+
+----------------------------------------------
+
+grub install （UEFI+GPT）
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=arch_grub --recheck
+
 
 ```
 
