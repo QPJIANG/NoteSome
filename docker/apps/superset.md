@@ -5,9 +5,11 @@
 -----------------------------------
 启动:
 docker run -d -p 8088:8088 -v /opt/docker/superset:/home/superset amancevice/superset
+
 docker ps
 docker exec -it  def43799758d fabmanager  --help
 docker exec -it  def43799758d fabmanager  list-users  --app superset
+
 ls /opt/docker/superset/
 
 # 创建管理员

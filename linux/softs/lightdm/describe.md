@@ -38,8 +38,17 @@ greeter-session=lightdm-webkit2-greeter
 greeter:
 
 ```
-​	deepin: lightdm-deepin-greeter
+	deepin: lightdm-deepin-greeter
 ​	lightdm-webkit2-greeter
 ​	lightdm-gtk-greeter
+```
+
+
+
+
+
+```
+dm-tool  switch-to-greeter  # 切换用户
+dm-tool  lock   锁屏
 ```
 
