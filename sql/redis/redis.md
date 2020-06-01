@@ -1,4 +1,16 @@
+```
+使用默认端口连接本机未设置密码的redis ，执行关闭操作。
+redis-cli shutdown    
+带密码
+redis-cli -a <密码> shutdown  
+```
+
+
+
+
+
 Redis Server:
+
 ```
 	redis-server --help
 	Usage: ./redis-server [/path/to/redis.conf] [options]
@@ -74,3 +86,4 @@ When no command is given, redis-cli starts in interactive mode.
 Type "help" in interactive mode for information on available commands.
 
 ```
+

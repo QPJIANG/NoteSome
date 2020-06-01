@@ -40,6 +40,8 @@ trusted-host=pypi.douban.com
 
 
 ```
+pip freeze > requirements.txt
+
 pip install -r requirements.txt
 ```
 

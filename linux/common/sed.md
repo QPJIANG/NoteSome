@@ -142,6 +142,18 @@ https://www.cnblogs.com/-zyj/p/5763303.html
 
 ```
 grep old_str . -R|awk '{print $1}'| awk -F ':' '{print $1}'|xargs  sed -i "s/old_str/new_str/g" 
+
+参考： https://blog.csdn.net/u011068702/article/details/91422409
+	比如在目录 /root/chenyu/cy/下，把包含文本/A/B C替换成文本E=F
+	grep -Rl /A/B\ C /root/chenyu/c* | xargs sed -i 's#/A/B\ C#E=F#g'
+	替换回来
+	grep -Rl E=F /root/chenyu/c* | xargs sed -i 's#E=F#/A/B\ C#g'
+	
+	
+注： sed - i 's/old/new/g'  /为分割符号，可以使用其他符号替换(替换内容中特殊字符需要使用反斜线”\”进行转义)。
+
+参考： https://www.cnblogs.com/linux-wangkun/p/5745584.html
+
 ```
 
 

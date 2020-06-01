@@ -47,3 +47,21 @@ zssh
 ssh and telnet client with zmodem file transfer capability
 ```
 
+```
+lsblk  
+lspci
+lscpu
+lsmod
+findmnt
+ss/netstat
+```
+
+```
+lshw
+lsscsi
+sg3utils
+dmidecode
+hdparm
+
+```
+
