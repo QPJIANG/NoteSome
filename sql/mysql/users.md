@@ -16,7 +16,7 @@ update user set host = '%' where user = 'root';
 CREATE USER 'username'@'host' IDENTIFIED BY 'password';
 eg:
 CREATE USER 'dog'@'localhost' IDENTIFIED BY '123456';
-CREATE USER 'pig'@'192.168.1.101_' IDENDIFIED BY '123456';
+CREATE USER 'pig'@'192.168.1.101' IDENDIFIED BY '123456';
 CREATE USER 'pig'@'%' IDENTIFIED BY '123456';
 CREATE USER 'pig'@'%' IDENTIFIED BY '';
 CREATE USER 'pig'@'%';

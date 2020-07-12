@@ -38,3 +38,8 @@ goimports,guru 位于： tools/cmd 下
 
 环境配置可参考：<https://www.cnblogs.com/yangxiaoyi/p/9692369.html>
 
+```
+ go test 显示详细
+ "go.testFlags": ["-v"]
+```
+

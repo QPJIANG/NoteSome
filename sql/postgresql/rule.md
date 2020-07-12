@@ -23,5 +23,7 @@ create or replace rule <rule_name> as on update to <bind_table> do also insert i
 create or replace rule <rule_name> as on delete to <bind_table> do also insert into <target_table> (xxx,xxx,...)  values(old.<字段名>,old.<字段名>,...);
 
 
+
+DROP RULE [ IF EXISTS ] name ON table_name [ CASCADE | RESTRICT ]
 ```
 

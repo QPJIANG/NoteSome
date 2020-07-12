@@ -10,8 +10,13 @@ sc config 服务名 start= DEMAND             (手动)
 sc config 服务名 start= DISABLED           (禁用)
 
 启动和关闭服务：
-net start/stop 服务名         
+net start/stop 服务名       
 
+sc start/stop   服务名   
+
+查询服务：
+
+sc query 服务名   
 
 删除服务：
 sc delete 服务名

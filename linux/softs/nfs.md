@@ -22,10 +22,19 @@ nfs.service
 3. restart nfs service
 ```
 
+```
+修改 /etc/exports  不重启nfs 服务直接生效
+# exportfs -arv
+```
+
 
 
 ## nfs client mount
 
+	export 查看服务器哪些目录可以挂载：
+	# mount -e <nfs-server>
+	
+	
 	http://www.runoob.com/linux/linux-comm-mount.html
 	https://www.linuxidc.com/Linux/2016-08/134666.htm
 	https://blog.csdn.net/linuxnews/article/details/51350408

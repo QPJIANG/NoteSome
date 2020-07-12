@@ -104,7 +104,7 @@ svn copy svn://xxxx/<project>/trunk svn://xxxx/<project>/branches/<branch_name> 
 ```bash
 svn sw svn_branch_url
 ```
-合并代码：
+合并代码(merge)：
 ```bash
 将svn_branch_url 分支的代码合并到当前分支
 svn merge svn_branch_url  
@@ -143,9 +143,23 @@ diff
 ```bash
 svn diff -r v1:v2 只能看到当前分支相关的diff
 svn diff -r v1:v2 svn-branch-url  : 查看指定分支的diff
+
+
+svn diff branche1  branche2    : 查看两个分支的diff
+svn diff 目录   branche2   : 查看当前分支与指定分支的差异（二者目录一致）
 ```
 
 -----------------------------------------------
+
+撤销add
+
+```
+svn revert --depth infinity .   撤销当前目录下add 的所有文件
+```
+
+
+
+
 
 
 
