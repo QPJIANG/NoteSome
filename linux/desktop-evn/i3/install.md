@@ -52,3 +52,10 @@ rofi 替换启动器
 bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun,run,ssh -show combi -modi combi"
 ```
 
+
+
+```
+xprop
+获取窗口class
+```
+
