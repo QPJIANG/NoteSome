@@ -77,6 +77,9 @@ fcitx -d -r --enable sogou-qimpanel
 
 fcitx 添加输入法，重启。
 
+
+fcitx -d -r --enable sogou-qimpanel (可能搜狗启动有延迟，进入桌面后不能立即使用)
+
 ------------------------------------------------------------------------------------
 切换搜狗输入法后输入时不显示中文：
 $ sogou-qimpanel
@@ -126,7 +129,14 @@ SogouPY、SogouPY.users、sogou-qimpanel
 通过下面的命令重启搜狗输入法，看重启后是否可以正常使用：
 killall fcitx
 killall sogou-qinpanel
-fcitx
+fcitx &
+sogou-qinpanel &
 
+```
+
+
+
+```
+使用sougou, 用 fcitx-lilydjwg-git 替换 fcitx 包。
 ```
 

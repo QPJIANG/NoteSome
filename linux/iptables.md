@@ -97,7 +97,7 @@ iptables -A INPUT -s <10.0.0.0/24> -p  all -j ACCEPT
 
 nat 分snat 和dnat  : 
 
-e参考:
+参考:
 
 <http://www.zsythink.net/archives/1764>
 
