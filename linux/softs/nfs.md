@@ -32,9 +32,10 @@ nfs.service
 ## nfs client mount
 
 	export 查看服务器哪些目录可以挂载：
-	# mount -e <nfs-server>
-	
-	
+	# showmount -e <nfs-server>
+
+
+​	
 	http://www.runoob.com/linux/linux-comm-mount.html
 	https://www.linuxidc.com/Linux/2016-08/134666.htm
 	https://blog.csdn.net/linuxnews/article/details/51350408
@@ -47,7 +48,6 @@ nfs.service
 	# umount mount_point_path
 
 
-​	
 ​	Usage: mount -V                 : print version
 ​	       mount -h                 : print this help
 ​	       mount                    : list mounted filesystems
