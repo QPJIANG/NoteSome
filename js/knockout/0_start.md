@@ -62,7 +62,7 @@ observable， subscribe
 
 
 
-手脚架：
+脚手架：
 
 ```
 var ViewModel = function () {
