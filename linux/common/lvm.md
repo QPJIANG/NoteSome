@@ -126,3 +126,11 @@ vgchange -a y命令激活系统所有卷组。
 8:resize2fs /dev/VolGroup00/LogVol00
 ```
 
+
+
+
+
+```
+partprobe  创建磁盘分区时，找不到分区设备文件。
+```
+

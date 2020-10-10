@@ -1,8 +1,8 @@
-idea 创建项目，指定spring boot ，并定制基本的star 可创建spring boot 手脚架
+idea 创建项目，指定spring boot ，并定制基本的star 可创建spring boot 脚手架
 
 
 
-vscode ： 安装spring boot 插件：  ctrl+shift+p   搜索spring  . 选spring  initializr   maven 创建maven 的手脚架
+vscode ： 安装spring boot 插件：  ctrl+shift+p   搜索spring  . 选spring  initializr   maven 创建maven 的脚手架
 
 
 
