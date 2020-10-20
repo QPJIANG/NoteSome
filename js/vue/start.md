@@ -16,6 +16,6 @@ cnpm install -g vue-cli
  npm run dev ,  yarn dev
 
 
-手脚架搭建完成
+脚手架搭建完成
 ```
 

@@ -97,7 +97,7 @@ iptables -A INPUT -s <10.0.0.0/24> -p  all -j ACCEPT
 
 nat 分snat 和dnat  : 
 
-e参考:
+参考:
 
 <http://www.zsythink.net/archives/1764>
 
@@ -124,5 +124,22 @@ dnat:    (参考 https://www.cnblogs.com/jjzd/p/6505871.html)
 
 （iptables -t nat -A PREROUTING -d <宿主机ip> -p tcp -m tcp --dport <宿主机端口>  -j DNAT --to-destination <虚拟机ip>:<虚拟机端口>）
 
+```
+
+
+
+```
+端口转发:
+
+同端口转发(  :3389    192.168.4.13:3389 )
+
+iptables -t nat -I PREROUTING -p tcp --dport 3389 -j DNAT --to 192.168.4.13
+iptables -t nat -I POSTROUTING -p tcp --dport 3389 -j MASQUERADE
+
+
+不同端口转发(192.168.2.231:3388    192.168.4.13:3389 )
+
+iptables -t nat -A PREROUTING -p tcp -m tcp --dport 3388 -j DNAT --to-destination 192.168.4.13:3389
+iptables -t nat -A POSTROUTING -s 192.168.4.0/24  -d 192.168.4.13 -p tcp -m tcp --dport 3389 -j SNAT  --to-source 192.168.2.231
 ```
 
