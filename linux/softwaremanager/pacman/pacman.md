@@ -3,7 +3,10 @@ pacman 用法：
 ```
     pacman -Sy abc                 #和源同步后安装名为abc的包
 pacman -S   abc                    #从本地数据库中得到abc的信息，下载安装abc包
-    pacman -Sf abc                 #强制安装包abc
+    
+    # pacman -Sf abc                 #强制安装包abc
+    # f 参数已经失效
+    
     pacman -Ss abc                 #搜索有关abc信息的包
     pacman -Si abc                 #从数据库中搜索包abc的信息
     pacman -Qi abc                 #列出已安装的包abc的详细信息

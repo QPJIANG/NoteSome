@@ -22,3 +22,12 @@ extension:
 $ gsettings set org.cinnamon.desktop.default-applications.terminal exec <terminal_cmd>
 ```
 
+
+
+右键解压：
+
+```
+安装 nemo-fileroller
+kill nemo 进程重新打开文件管理器
+```
+

@@ -184,3 +184,10 @@ package() {
 
 ```
 
+
+
+```
+解压软件包
+$ tar -I zstd -xvf archive.tar.zst 
+```
+

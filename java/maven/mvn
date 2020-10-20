@@ -81,3 +81,27 @@ http://maven.ibiblio.org/maven2/
 <scope>provided</scope>，因为provided表明该包只在编译和测试的时候
 ```
 
+maven 发布 jar 到本地仓库
+
+```
+mvn install:install-file
+-Dfile=jar包路径
+-DgroupId=包goupid
+-DartifactId=包id
+-Dversion=包版本号
+-Dpackaging=jar
+```
+
+maven 发布 jar 到私服
+
+```
+mvn deploy:deploy-file 
+-DgroupId=包goupid
+-DartifactId=包id
+-Dversion=包版本号
+-Dpackaging=jar 
+-Dfile=jar包路径
+-Durl=仓库地址
+-DrepositoryId=仓库id（与settings 中一致）
+```
+
