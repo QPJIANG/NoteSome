@@ -10,3 +10,11 @@ ALTER TABLE <table_name>  DROP CONSTRAINT <index_name>;
 ALTER TABLE <table_name> ADD CONSTRAINT <index_name> primary key (filed1, field2);
 ```
 
+
+
+
+
+```
+
+```
+

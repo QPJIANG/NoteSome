@@ -43,3 +43,18 @@ goimports,guru 位于： tools/cmd 下
  "go.testFlags": ["-v"]
 ```
 
+```
+go get -v github.com/rogpeppe/godef
+go install github.com/mdempsky/gocode
+go install github.com/uudashr/gopkgs/v2/cmd/gopkgs
+go install github.com/stamblerre/gocode
+go install golang.org/x/lint/golint
+```
+
+```
+
+非go mod 项目，配置 go.gopath ,go.goroot， 将需要查找依赖包的路径写入gopath (linux  : 分割)
+通过gopath/src 下找相应的包。
+
+```
+

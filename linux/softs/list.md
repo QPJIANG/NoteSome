@@ -34,7 +34,7 @@ sublime text 3 激活码：
 参考：https://blog.csdn.net/sinat_32829963/article/details/79273129
 
 ```
-—– BEGIN LICENSE —– 
+—– BEGIN LICENSE —– (失效)
 Country Rebel 
 Single User License 
 EA7E-993095 
@@ -48,7 +48,7 @@ EA7E-993095
 ECB1BC4E D8010D5A 77BA86C8 BA7F76CC 
 —— END LICENSE ——
 
-—– BEGIN LICENSE —– 
+—– BEGIN LICENSE —– (失效)
 TwitterInc 
 200 User License 
 EA7E-890007 
