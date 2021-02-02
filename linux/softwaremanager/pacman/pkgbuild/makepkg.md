@@ -90,7 +90,7 @@ source=("./$pkgname-$pkgver.tar.gz")
 # 源码 md5sum (未填写makepkg 校验将不通过)
 md5sums=(ce4c0......)
 
-# 可替代md5sum
+# 可替代md5sum,不使用时注释掉
 sha256sums=
 
 validpgpkeys=()
@@ -181,6 +181,13 @@ package() {
 }
 
 
+
+```
+
+```
+在 PKGBUILD 所在目录执行 makepkg --source，会生成 .src.tar.gz 源码包，这就是需要上传到 AUR 的东西，注意不要把任何二进制文件加入源码包。
+
+在 PKGBUILD 所在目录执行 makepkg  可生成用于安装的包： sudo pacman -U 包名  （安装生成的包）
 
 ```
 

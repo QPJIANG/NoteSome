@@ -18,7 +18,6 @@ ebtables 和 dnsmasq 用于默认的 NAT/DHCP网络
 bridge-utils 用于桥接网络
 openbsd-netcat 通过 SSH 远程管理
 
-
 启动/开机自起守护进程
 systemctl start libvirtd    #启动libvirtd进程
 systemctl enable libvirtd   #开机自起
@@ -86,5 +85,13 @@ Packages (20) augeas-1.12.0-1  ceph-libs-14.2.8-1  glusterfs-1:7.3-1  gtk-vnc-1.
               oath-toolkit-2.6.2-7  phodav-2.4-1  python-chardet-3.0.4-4  python-idna-2.9-1  python-requests-2.23.0-1  python-urllib3-1.25.8-2  spice-gtk-0.37-1  virt-install-2.2.1-2
               xmlsec-1.2.29-1  libvirt-5.10.0-2  virt-manager-2.2.1-2
 
+```
+
+
+
+
+
+```
+sudo pacman -S edk2-armvirt   : arm64 支持（aarch64）
 ```
 

@@ -11,6 +11,8 @@
 ```
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build test.go
 CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build test.go
+
+CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build test.go
 ```
 
 2、Linux下编译Mac, Windows平台的64位可执行程序：

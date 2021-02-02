@@ -53,7 +53,34 @@ alter user user() identified by "密码";
 ```
 mysql 5.7
 
+解压。
 
-bin/mysqld --initialize --user=mysql  --datadir=<mysql 数据目录>
+初始化。
+./bin/mysqld --initialize --user=mysql  --datadir=<mysql 数据目录>
+
+记住随机密码。
+
+
+重装删除/etc/my.cnf /etc/mysql/ 
+
+配置启动脚本：
+./support-files/mysql.server 设置如下内容
+basedir=<mysql 根目录>
+datadir=<mysql data目录>
+
+
+./support-files/mysql.server start/stop/status
+
+./bin/mysql -uroot -p
+使用初始化生成的密码登录
+
+
+
+修改root 密码
+set password=password('new password');
+
+授权：允许远程访问
+grant all privileges on *.* to 'root'@'%' identified by 'root';
+flush privileges;
 ```
 

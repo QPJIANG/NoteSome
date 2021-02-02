@@ -21,6 +21,8 @@ CREATE USER 'pig'@'%' IDENTIFIED BY '123456';
 CREATE USER 'pig'@'%' IDENTIFIED BY '';
 CREATE USER 'pig'@'%';
 
+CREATE USER 'root'@'%' IDENTIFIED BY 'root12345';
+
 
 GRANT privileges ON databasename.tablename TO 'username'@'host'
 privileges：用户的操作权限，如SELECT，INSERT，UPDATE等，如果要授予所的权限则使用ALL

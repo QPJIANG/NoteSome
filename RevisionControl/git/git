@@ -141,3 +141,13 @@ git tag
 ```
 
 
+
+
+
+```
+Git Status出现的文件中文乱码的问题: 
+在git项目目录中执行 git config core.quotepath false
+或
+git config --global core.quotepath false
+```
+

@@ -17,7 +17,7 @@ rpm -qf file_filepath  : 查询文件是属于哪个包的
 rpm 包解压
 
 ```
-安装软件包： rpm-tools
+安装软件包： rpm-tools,cpio
 
 rpm2cpio xxx.rpm | cpio -divm
 ```

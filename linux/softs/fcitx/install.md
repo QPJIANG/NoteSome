@@ -137,6 +137,6 @@ sogou-qinpanel &
 
 
 ```
-使用sougou, 用 fcitx-lilydjwg-git 替换 fcitx 包。
+使用sougou, 用  替换 fcitx 包。
 ```
 
